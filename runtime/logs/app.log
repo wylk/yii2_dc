@@ -18148,3 +18148,1000 @@ $_SERVER = [
     'REQUEST_TIME' => 1503543462
 ]
 >>>>>>> add1
+2017-08-24 05:22:07 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '<<' (T_SL), expecting ']'' in C:\Users\51ao03\Desktop\project\yii2_dc\web\modules\plugin\Plugin.php:25
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-08-24 05:22:07 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'plugin/publics/default/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jpc3ev6ebfj42q3geapt0g2ip0'
+    '_csrf' => 'f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"úˆÇVq½6f íÆŠ_9¶¸çŠC†SFÛþ*Ü‰\";}'
+    '_identity' => '942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yii2.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=jpc3ev6ebfj42q3geapt0g2ip0; _csrf=f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%FA%88%C7Vq%BD6%0Ef%A0%1E%ED%1B%C6%8A%11_9%B6%B8%E7%8AC%86SF%DB%FE%2A%11%DC%89%22%3B%7D; _identity=942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\develop\\Java\\jdk1.7.0_51\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Autodesk\\Backburner\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\51ao03\\Desktop\\å·¥å…·\\SublimeText3_1ha;C;\\Program Files\\Git\\cmd;C:\\php\\php\\php-5.4.45;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\51ao03\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\51ao03\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.4.45'
+    'SERVER_NAME' => 'yii2.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web/index.php'
+    'REMOTE_PORT' => '53268'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=plugin/publics/default/index'
+    'REQUEST_URI' => '/index.php?r=plugin/publics/default/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503552127.932
+    'REQUEST_TIME' => 1503552127
+]
+2017-08-24 05:22:09 [127.0.0.1][1][jpc3ev6ebfj42q3geapt0g2ip0][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 28651 bytes' 
+
+in C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2-debug\LogTarget.php:88
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\Users\\51ao03...', 88, Array)
+#1 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2-debug\LogTarget.php(88): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2-debug\LogTarget.php(63): yii\debug\LogTarget->updateIndexFile('C:\\Users\\51ao03...', Array)
+#3 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#4 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#5 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\ErrorHandler.php(262): yii\log\Logger->flush(true)
+#7 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#8 {main}
+2017-08-24 05:22:07 [127.0.0.1][1][jpc3ev6ebfj42q3geapt0g2ip0][info][application] $_GET = [
+    'r' => 'plugin/publics/default/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jpc3ev6ebfj42q3geapt0g2ip0'
+    '_csrf' => 'f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"úˆÇVq½6f íÆŠ_9¶¸çŠC†SFÛþ*Ü‰\";}'
+    '_identity' => '942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yii2.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=jpc3ev6ebfj42q3geapt0g2ip0; _csrf=f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%FA%88%C7Vq%BD6%0Ef%A0%1E%ED%1B%C6%8A%11_9%B6%B8%E7%8AC%86SF%DB%FE%2A%11%DC%89%22%3B%7D; _identity=942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\develop\\Java\\jdk1.7.0_51\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Autodesk\\Backburner\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\51ao03\\Desktop\\å·¥å…·\\SublimeText3_1ha;C;\\Program Files\\Git\\cmd;C:\\php\\php\\php-5.4.45;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\51ao03\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\51ao03\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.4.45'
+    'SERVER_NAME' => 'yii2.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web/index.php'
+    'REMOTE_PORT' => '53268'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=plugin/publics/default/index'
+    'REQUEST_URI' => '/index.php?r=plugin/publics/default/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503552127.932
+    'REQUEST_TIME' => 1503552127
+]
+2017-08-24 05:23:13 [127.0.0.1][1][jpc3ev6ebfj42q3geapt0g2ip0][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 28651 bytes' 
+
+in C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2-debug\LogTarget.php:88
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\Users\\51ao03...', 88, Array)
+#1 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2-debug\LogTarget.php(88): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2-debug\LogTarget.php(63): yii\debug\LogTarget->updateIndexFile('C:\\Users\\51ao03...', Array)
+#3 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#4 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#5 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2017-08-24 05:23:12 [127.0.0.1][1][jpc3ev6ebfj42q3geapt0g2ip0][info][application] $_GET = [
+    'r' => 'plugin/publics/default/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jpc3ev6ebfj42q3geapt0g2ip0'
+    '_csrf' => 'f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"úˆÇVq½6f íÆŠ_9¶¸çŠC†SFÛþ*Ü‰\";}'
+    '_identity' => '942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yii2.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=jpc3ev6ebfj42q3geapt0g2ip0; _csrf=f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%FA%88%C7Vq%BD6%0Ef%A0%1E%ED%1B%C6%8A%11_9%B6%B8%E7%8AC%86SF%DB%FE%2A%11%DC%89%22%3B%7D; _identity=942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\develop\\Java\\jdk1.7.0_51\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Autodesk\\Backburner\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\51ao03\\Desktop\\å·¥å…·\\SublimeText3_1ha;C;\\Program Files\\Git\\cmd;C:\\php\\php\\php-5.4.45;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\51ao03\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\51ao03\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.4.45'
+    'SERVER_NAME' => 'yii2.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web/index.php'
+    'REMOTE_PORT' => '53307'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=plugin/publics/default/index'
+    'REQUEST_URI' => '/index.php?r=plugin/publics/default/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503552192.149
+    'REQUEST_TIME' => 1503552192
+]
+2017-08-24 05:34:31 [127.0.0.1][1][jpc3ev6ebfj42q3geapt0g2ip0][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 28651 bytes' 
+
+in C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2-debug\LogTarget.php:88
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\Users\\51ao03...', 88, Array)
+#1 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2-debug\LogTarget.php(88): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2-debug\LogTarget.php(63): yii\debug\LogTarget->updateIndexFile('C:\\Users\\51ao03...', Array)
+#3 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#4 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#5 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2017-08-24 05:34:29 [127.0.0.1][1][jpc3ev6ebfj42q3geapt0g2ip0][info][application] $_GET = [
+    'r' => 'plugin/publics/default/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jpc3ev6ebfj42q3geapt0g2ip0'
+    '_csrf' => 'f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"úˆÇVq½6f íÆŠ_9¶¸çŠC†SFÛþ*Ü‰\";}'
+    '_identity' => '942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yii2.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=jpc3ev6ebfj42q3geapt0g2ip0; _csrf=f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%FA%88%C7Vq%BD6%0Ef%A0%1E%ED%1B%C6%8A%11_9%B6%B8%E7%8AC%86SF%DB%FE%2A%11%DC%89%22%3B%7D; _identity=942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\develop\\Java\\jdk1.7.0_51\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Autodesk\\Backburner\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\51ao03\\Desktop\\å·¥å…·\\SublimeText3_1ha;C;\\Program Files\\Git\\cmd;C:\\php\\php\\php-5.4.45;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\51ao03\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\51ao03\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.4.45'
+    'SERVER_NAME' => 'yii2.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web/index.php'
+    'REMOTE_PORT' => '53614'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=plugin/publics/default/index'
+    'REQUEST_URI' => '/index.php?r=plugin/publics/default/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503552869.964
+    'REQUEST_TIME' => 1503552869
+]
+2017-08-24 05:35:07 [127.0.0.1][1][jpc3ev6ebfj42q3geapt0g2ip0][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 28651 bytes' 
+
+in C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2-debug\LogTarget.php:88
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\Users\\51ao03...', 88, Array)
+#1 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2-debug\LogTarget.php(88): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2-debug\LogTarget.php(63): yii\debug\LogTarget->updateIndexFile('C:\\Users\\51ao03...', Array)
+#3 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#4 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#5 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2017-08-24 05:35:06 [127.0.0.1][1][jpc3ev6ebfj42q3geapt0g2ip0][info][application] $_GET = [
+    'r' => 'plugin/publics/default/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jpc3ev6ebfj42q3geapt0g2ip0'
+    '_csrf' => 'f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"úˆÇVq½6f íÆŠ_9¶¸çŠC†SFÛþ*Ü‰\";}'
+    '_identity' => '942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yii2.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=jpc3ev6ebfj42q3geapt0g2ip0; _csrf=f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%FA%88%C7Vq%BD6%0Ef%A0%1E%ED%1B%C6%8A%11_9%B6%B8%E7%8AC%86SF%DB%FE%2A%11%DC%89%22%3B%7D; _identity=942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\develop\\Java\\jdk1.7.0_51\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Autodesk\\Backburner\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\51ao03\\Desktop\\å·¥å…·\\SublimeText3_1ha;C;\\Program Files\\Git\\cmd;C:\\php\\php\\php-5.4.45;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\51ao03\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\51ao03\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.4.45'
+    'SERVER_NAME' => 'yii2.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web/index.php'
+    'REMOTE_PORT' => '53636'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=plugin/publics/default/index'
+    'REQUEST_URI' => '/index.php?r=plugin/publics/default/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503552906.044
+    'REQUEST_TIME' => 1503552906
+]
+2017-08-24 05:44:37 [127.0.0.1][1][jpc3ev6ebfj42q3geapt0g2ip0][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 28651 bytes' 
+
+in C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2-debug\LogTarget.php:88
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\Users\\51ao03...', 88, Array)
+#1 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2-debug\LogTarget.php(88): unserialize('<<<<<<< HEAD\r\na...')
+#2 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2-debug\LogTarget.php(63): yii\debug\LogTarget->updateIndexFile('C:\\Users\\51ao03...', Array)
+#3 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#4 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#5 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\log\Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2017-08-24 05:44:35 [127.0.0.1][1][jpc3ev6ebfj42q3geapt0g2ip0][info][application] $_GET = [
+    'r' => 'plugin/publics/default/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jpc3ev6ebfj42q3geapt0g2ip0'
+    '_csrf' => 'f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"úˆÇVq½6f íÆŠ_9¶¸çŠC†SFÛþ*Ü‰\";}'
+    '_identity' => '942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yii2.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=jpc3ev6ebfj42q3geapt0g2ip0; _csrf=f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%FA%88%C7Vq%BD6%0Ef%A0%1E%ED%1B%C6%8A%11_9%B6%B8%E7%8AC%86SF%DB%FE%2A%11%DC%89%22%3B%7D; _identity=942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\develop\\Java\\jdk1.7.0_51\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Autodesk\\Backburner\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\51ao03\\Desktop\\å·¥å…·\\SublimeText3_1ha;C;\\Program Files\\Git\\cmd;C:\\php\\php\\php-5.4.45;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\51ao03\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\51ao03\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.4.45'
+    'SERVER_NAME' => 'yii2.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web/index.php'
+    'REMOTE_PORT' => '53976'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=plugin/publics/default/index'
+    'REQUEST_URI' => '/index.php?r=plugin/publics/default/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503553475.957
+    'REQUEST_TIME' => 1503553475
+]
+2017-08-24 05:50:59 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Use of undefined constant PLUGIN_URL - assumed 'PLUGIN_URL'' in C:\Users\51ao03\Desktop\project\yii2_dc\addons\food\publics\controllers\DefaultController.php:18
+Stack trace:
+#0 C:\Users\51ao03\Desktop\project\yii2_dc\addons\food\publics\controllers\DefaultController.php(18): yii\base\ErrorHandler->handleError(8, 'Use of undefine...', 'C:\\Users\\51ao03...', 18, Array)
+#1 [internal function]: app\addons\food\publics\controllers\DefaultController->actionIndex()
+#2 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#5 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('plugin/publics/...', Array)
+#6 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\Users\51ao03\Desktop\project\yii2_dc\web\index.php(13): yii\base\Application->run()
+#8 {main}
+2017-08-24 05:50:59 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'plugin/publics/default/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jpc3ev6ebfj42q3geapt0g2ip0'
+    '_csrf' => 'f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"úˆÇVq½6f íÆŠ_9¶¸çŠC†SFÛþ*Ü‰\";}'
+    '_identity' => '942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yii2.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=jpc3ev6ebfj42q3geapt0g2ip0; _csrf=f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%FA%88%C7Vq%BD6%0Ef%A0%1E%ED%1B%C6%8A%11_9%B6%B8%E7%8AC%86SF%DB%FE%2A%11%DC%89%22%3B%7D; _identity=942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\develop\\Java\\jdk1.7.0_51\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Autodesk\\Backburner\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\51ao03\\Desktop\\å·¥å…·\\SublimeText3_1ha;C;\\Program Files\\Git\\cmd;C:\\php\\php\\php-5.4.45;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\51ao03\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\51ao03\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.4.45'
+    'SERVER_NAME' => 'yii2.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web/index.php'
+    'REMOTE_PORT' => '54183'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=plugin/publics/default/index'
+    'REQUEST_URI' => '/index.php?r=plugin/publics/default/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503553859.276
+    'REQUEST_TIME' => 1503553859
+]
+2017-08-24 05:51:26 [127.0.0.1][-][-][error][yii\base\UnknownMethodException] exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: app\addons\food\publics\controllers\DefaultController::layout()' in C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Component.php:290
+Stack trace:
+#0 C:\Users\51ao03\Desktop\project\yii2_dc\addons\food\publics\controllers\DefaultController.php(18): yii\base\Component->__call('layout', Array)
+#1 C:\Users\51ao03\Desktop\project\yii2_dc\addons\food\publics\controllers\DefaultController.php(18): app\addons\food\publics\controllers\DefaultController->layout('layout1')
+#2 [internal function]: app\addons\food\publics\controllers\DefaultController->actionIndex()
+#3 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#6 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('plugin/publics/...', Array)
+#7 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\Users\51ao03\Desktop\project\yii2_dc\web\index.php(13): yii\base\Application->run()
+#9 {main}
+2017-08-24 05:51:26 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'plugin/publics/default/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jpc3ev6ebfj42q3geapt0g2ip0'
+    '_csrf' => 'f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"úˆÇVq½6f íÆŠ_9¶¸çŠC†SFÛþ*Ü‰\";}'
+    '_identity' => '942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yii2.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=jpc3ev6ebfj42q3geapt0g2ip0; _csrf=f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%FA%88%C7Vq%BD6%0Ef%A0%1E%ED%1B%C6%8A%11_9%B6%B8%E7%8AC%86SF%DB%FE%2A%11%DC%89%22%3B%7D; _identity=942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\develop\\Java\\jdk1.7.0_51\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Autodesk\\Backburner\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\51ao03\\Desktop\\å·¥å…·\\SublimeText3_1ha;C;\\Program Files\\Git\\cmd;C:\\php\\php\\php-5.4.45;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\51ao03\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\51ao03\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.4.45'
+    'SERVER_NAME' => 'yii2.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web/index.php'
+    'REMOTE_PORT' => '54204'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=plugin/publics/default/index'
+    'REQUEST_URI' => '/index.php?r=plugin/publics/default/index'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503553886.844
+    'REQUEST_TIME' => 1503553886
+]
+2017-08-24 06:03:40 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "".' in C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('', Array)
+#1 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\51ao03\Desktop\project\yii2_dc\web\index.php(13): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\51ao03\Desktop\project\yii2_dc\web\index.php(13): yii\base\Application->run()
+#2 {main}
+2017-08-24 06:03:40 [127.0.0.1][-][-][info][application] $_GET = [
+    'm' => 'plugin'
+    'p' => 'public'
+    'cn' => 'index'
+    'id' => 'food:sit:super_login'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jpc3ev6ebfj42q3geapt0g2ip0'
+    '_csrf' => 'f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"úˆÇVq½6f íÆŠ_9¶¸çŠC†SFÛþ*Ü‰\";}'
+    '_identity' => '942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yii2.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://yii2.com/index.php?r=plugin/publics/default/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=jpc3ev6ebfj42q3geapt0g2ip0; _csrf=f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%FA%88%C7Vq%BD6%0Ef%A0%1E%ED%1B%C6%8A%11_9%B6%B8%E7%8AC%86SF%DB%FE%2A%11%DC%89%22%3B%7D; _identity=942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\develop\\Java\\jdk1.7.0_51\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Autodesk\\Backburner\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\51ao03\\Desktop\\å·¥å…·\\SublimeText3_1ha;C;\\Program Files\\Git\\cmd;C:\\php\\php\\php-5.4.45;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\51ao03\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\51ao03\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.4.45'
+    'SERVER_NAME' => 'yii2.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web/index.php'
+    'REMOTE_PORT' => '54895'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'm=plugin&p=public&cn=index&id=food:sit:super_login'
+    'REQUEST_URI' => '/index.php?m=plugin&p=public&cn=index&id=food:sit:super_login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503554620.884
+    'REQUEST_TIME' => 1503554620
+]
+2017-08-24 06:39:07 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: plugin/publics/default/super_login' in C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('super_login', Array)
+#1 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('plugin/publics/...', Array)
+#2 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\Users\51ao03\Desktop\project\yii2_dc\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\51ao03\Desktop\project\yii2_dc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-08-24 06:39:07 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'plugin/publics/default/super_login'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jpc3ev6ebfj42q3geapt0g2ip0'
+    '_csrf' => 'f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"úˆÇVq½6f íÆŠ_9¶¸çŠC†SFÛþ*Ü‰\";}'
+    '_identity' => '942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yii2.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://yii2.com/index.php?r=plugin/publics/default/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=jpc3ev6ebfj42q3geapt0g2ip0; _csrf=f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%FA%88%C7Vq%BD6%0Ef%A0%1E%ED%1B%C6%8A%11_9%B6%B8%E7%8AC%86SF%DB%FE%2A%11%DC%89%22%3B%7D; _identity=942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\develop\\Java\\jdk1.7.0_51\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Autodesk\\Backburner\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\51ao03\\Desktop\\å·¥å…·\\SublimeText3_1ha;C;\\Program Files\\Git\\cmd;C:\\php\\php\\php-5.4.45;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\51ao03\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\51ao03\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.4.45'
+    'SERVER_NAME' => 'yii2.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web/index.php'
+    'REMOTE_PORT' => '58868'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=plugin/publics/default/super_login'
+    'REQUEST_URI' => '/index.php?r=plugin/publics/default/super_login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503556747.347
+    'REQUEST_TIME' => 1503556747
+]
+2017-08-24 06:39:28 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: plugin/publics/default/super_login' in C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('super_login', Array)
+#1 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('plugin/publics/...', Array)
+#2 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\Users\51ao03\Desktop\project\yii2_dc\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\51ao03\Desktop\project\yii2_dc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-08-24 06:39:27 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'plugin/publics/default/super_login'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jpc3ev6ebfj42q3geapt0g2ip0'
+    '_csrf' => 'f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"úˆÇVq½6f íÆŠ_9¶¸çŠC†SFÛþ*Ü‰\";}'
+    '_identity' => '942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yii2.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://yii2.com/index.php?r=plugin/publics/default/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=jpc3ev6ebfj42q3geapt0g2ip0; _csrf=f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%FA%88%C7Vq%BD6%0Ef%A0%1E%ED%1B%C6%8A%11_9%B6%B8%E7%8AC%86SF%DB%FE%2A%11%DC%89%22%3B%7D; _identity=942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\develop\\Java\\jdk1.7.0_51\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Autodesk\\Backburner\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\51ao03\\Desktop\\å·¥å…·\\SublimeText3_1ha;C;\\Program Files\\Git\\cmd;C:\\php\\php\\php-5.4.45;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\51ao03\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\51ao03\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.4.45'
+    'SERVER_NAME' => 'yii2.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web/index.php'
+    'REMOTE_PORT' => '58916'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=plugin/publics/default/super_login'
+    'REQUEST_URI' => '/index.php?r=plugin/publics/default/super_login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503556767.974
+    'REQUEST_TIME' => 1503556767
+]
+2017-08-24 06:39:43 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: plugin/publics/default/super_login' in C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('super_login', Array)
+#1 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('plugin/publics/...', Array)
+#2 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\Users\51ao03\Desktop\project\yii2_dc\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\51ao03\Desktop\project\yii2_dc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-08-24 06:39:43 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'plugin/publics/default/super_login'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jpc3ev6ebfj42q3geapt0g2ip0'
+    '_csrf' => 'f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"úˆÇVq½6f íÆŠ_9¶¸çŠC†SFÛþ*Ü‰\";}'
+    '_identity' => '942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yii2.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://yii2.com/index.php?r=plugin/publics/default/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=jpc3ev6ebfj42q3geapt0g2ip0; _csrf=f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%FA%88%C7Vq%BD6%0Ef%A0%1E%ED%1B%C6%8A%11_9%B6%B8%E7%8AC%86SF%DB%FE%2A%11%DC%89%22%3B%7D; _identity=942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\develop\\Java\\jdk1.7.0_51\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Autodesk\\Backburner\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\51ao03\\Desktop\\å·¥å…·\\SublimeText3_1ha;C;\\Program Files\\Git\\cmd;C:\\php\\php\\php-5.4.45;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\51ao03\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\51ao03\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.4.45'
+    'SERVER_NAME' => 'yii2.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web/index.php'
+    'REMOTE_PORT' => '58954'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=plugin/publics/default/super_login'
+    'REQUEST_URI' => '/index.php?r=plugin/publics/default/super_login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503556783.822
+    'REQUEST_TIME' => 1503556783
+]
+2017-08-24 06:40:16 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "".' in C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Module.php:532
+Stack trace:
+#0 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('', Array)
+#1 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Users\51ao03\Desktop\project\yii2_dc\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\51ao03\Desktop\project\yii2_dc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-08-24 06:40:16 [127.0.0.1][-][-][info][application] $_GET = [
+    'm' => 'plugin'
+    'p' => 'public'
+    'cn' => 'index'
+    'id' => 'food:sit:create_company'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jpc3ev6ebfj42q3geapt0g2ip0'
+    '_csrf' => 'f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"úˆÇVq½6f íÆŠ_9¶¸çŠC†SFÛþ*Ü‰\";}'
+    '_identity' => '942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yii2.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://yii2.com/index.php?r=plugin/publics/default/super_login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=jpc3ev6ebfj42q3geapt0g2ip0; _csrf=f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%FA%88%C7Vq%BD6%0Ef%A0%1E%ED%1B%C6%8A%11_9%B6%B8%E7%8AC%86SF%DB%FE%2A%11%DC%89%22%3B%7D; _identity=942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\develop\\Java\\jdk1.7.0_51\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Autodesk\\Backburner\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\51ao03\\Desktop\\å·¥å…·\\SublimeText3_1ha;C;\\Program Files\\Git\\cmd;C:\\php\\php\\php-5.4.45;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\51ao03\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\51ao03\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.4.45'
+    'SERVER_NAME' => 'yii2.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web/index.php'
+    'REMOTE_PORT' => '59022'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'm=plugin&p=public&cn=index&id=food:sit:create_company'
+    'REQUEST_URI' => '/index.php?m=plugin&p=public&cn=index&id=food:sit:create_company'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503556816.237
+    'REQUEST_TIME' => 1503556816
+]
+2017-08-24 06:52:08 [127.0.0.1][-][-][error][yii\base\ViewNotFoundException] exception 'yii\base\ViewNotFoundException' with message 'The view file does not exist: C:\Users\51ao03\Desktop\project\yii2_dc\addons\food\publics\views\default\create_company.php' in C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\View.php:229
+Stack trace:
+#0 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('C:\\Users\\51ao03...', Array, Object(app\addons\food\publics\controllers\DefaultController))
+#1 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('create_company', Array, Object(app\addons\food\publics\controllers\DefaultController))
+#2 C:\Users\51ao03\Desktop\project\yii2_dc\addons\food\publics\controllers\DefaultController.php(32): yii\base\Controller->render('create_company')
+#3 [internal function]: app\addons\food\publics\controllers\DefaultController->actionCreate_company()
+#4 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('create_company', Array)
+#7 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('plugin/publics/...', Array)
+#8 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\Users\51ao03\Desktop\project\yii2_dc\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-08-24 06:52:07 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'plugin/publics/default/create_company'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jpc3ev6ebfj42q3geapt0g2ip0'
+    '_csrf' => 'f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"úˆÇVq½6f íÆŠ_9¶¸çŠC†SFÛþ*Ü‰\";}'
+    '_identity' => '942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yii2.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://yii2.com/index.php?r=plugin/publics/default/super_login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=jpc3ev6ebfj42q3geapt0g2ip0; _csrf=f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%FA%88%C7Vq%BD6%0Ef%A0%1E%ED%1B%C6%8A%11_9%B6%B8%E7%8AC%86SF%DB%FE%2A%11%DC%89%22%3B%7D; _identity=942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\develop\\Java\\jdk1.7.0_51\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Autodesk\\Backburner\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\51ao03\\Desktop\\å·¥å…·\\SublimeText3_1ha;C;\\Program Files\\Git\\cmd;C:\\php\\php\\php-5.4.45;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\51ao03\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\51ao03\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.4.45'
+    'SERVER_NAME' => 'yii2.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web/index.php'
+    'REMOTE_PORT' => '60227'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=plugin/publics/default/create_company'
+    'REQUEST_URI' => '/index.php?r=plugin/publics/default/create_company'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503557527.933
+    'REQUEST_TIME' => 1503557527
+]
+2017-08-24 06:54:42 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: plugin/publics/default/shop_login' in C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('shop_login', Array)
+#1 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('plugin/publics/...', Array)
+#2 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\Users\51ao03\Desktop\project\yii2_dc\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\Users\51ao03\Desktop\project\yii2_dc\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-08-24 06:54:42 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'plugin/publics/default/shop_login'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jpc3ev6ebfj42q3geapt0g2ip0'
+    '_csrf' => 'f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"úˆÇVq½6f íÆŠ_9¶¸çŠC†SFÛþ*Ü‰\";}'
+    '_identity' => '942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yii2.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://yii2.com/index.php?r=plugin/publics/default/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=jpc3ev6ebfj42q3geapt0g2ip0; _csrf=f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%FA%88%C7Vq%BD6%0Ef%A0%1E%ED%1B%C6%8A%11_9%B6%B8%E7%8AC%86SF%DB%FE%2A%11%DC%89%22%3B%7D; _identity=942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\develop\\Java\\jdk1.7.0_51\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Autodesk\\Backburner\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\51ao03\\Desktop\\å·¥å…·\\SublimeText3_1ha;C;\\Program Files\\Git\\cmd;C:\\php\\php\\php-5.4.45;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\51ao03\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\51ao03\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.4.45'
+    'SERVER_NAME' => 'yii2.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web/index.php'
+    'REMOTE_PORT' => '60527'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=plugin/publics/default/shop_login'
+    'REQUEST_URI' => '/index.php?r=plugin/publics/default/shop_login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503557682.845
+    'REQUEST_TIME' => 1503557682
+]
+2017-08-24 06:56:12 [127.0.0.1][-][-][error][yii\base\ViewNotFoundException] exception 'yii\base\ViewNotFoundException' with message 'The view file does not exist: C:\Users\51ao03\Desktop\project\yii2_dc\addons\food\publics\views\default\shop_login.php' in C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\View.php:229
+Stack trace:
+#0 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('C:\\Users\\51ao03...', Array, Object(app\addons\food\publics\controllers\DefaultController))
+#1 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('shop_login', Array, Object(app\addons\food\publics\controllers\DefaultController))
+#2 C:\Users\51ao03\Desktop\project\yii2_dc\addons\food\publics\controllers\DefaultController.php(39): yii\base\Controller->render('shop_login')
+#3 [internal function]: app\addons\food\publics\controllers\DefaultController->actionShop_login()
+#4 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('shop_login', Array)
+#7 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('plugin/publics/...', Array)
+#8 C:\Users\51ao03\Desktop\project\yii2_dc\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\Users\51ao03\Desktop\project\yii2_dc\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-08-24 06:56:12 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'plugin/publics/default/shop_login'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jpc3ev6ebfj42q3geapt0g2ip0'
+    '_csrf' => 'f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"úˆÇVq½6f íÆŠ_9¶¸çŠC†SFÛþ*Ü‰\";}'
+    '_identity' => '942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'yii2.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://yii2.com/index.php?r=plugin/publics/default/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=jpc3ev6ebfj42q3geapt0g2ip0; _csrf=f437bf121d0563eab98599010ca7360e5b4742079bfaab04612519294915e02ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%FA%88%C7Vq%BD6%0Ef%A0%1E%ED%1B%C6%8A%11_9%B6%B8%E7%8AC%86SF%DB%FE%2A%11%DC%89%22%3B%7D; _identity=942dcfdfc6077274788948db4c35a17b4cebcbbfc7914635f075ffafa5b3da21a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22C5f5K1Kg8tL-IutYAom4-s7RMh_xMk_l%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\develop\\Java\\jdk1.7.0_51\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Samsung\\SamsungLink\\AllShare Framework DMS\\bin\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Autodesk\\Backburner\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\51ao03\\Desktop\\å·¥å…·\\SublimeText3_1ha;C;\\Program Files\\Git\\cmd;C:\\php\\php\\php-5.4.45;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\51ao03\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\51ao03\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.4.45'
+    'SERVER_NAME' => 'yii2.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'C:/Users/51ao03/Desktop/project/yii2_dc/web/index.php'
+    'REMOTE_PORT' => '60703'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=plugin/publics/default/shop_login'
+    'REQUEST_URI' => '/index.php?r=plugin/publics/default/shop_login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1503557772.25
+    'REQUEST_TIME' => 1503557772
+]

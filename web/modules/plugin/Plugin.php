@@ -22,8 +22,7 @@ class Plugin extends \yii\base\Module
             'stores' => [
                 'class' => 'app\addons\food\stores\Stores',
             ],
-<<<<<<< HEAD
-=======
+
             'shops' => [
                 'class' => 'app\addons\food\shops\Shops',
             ],
@@ -34,7 +33,7 @@ class Plugin extends \yii\base\Module
                 'class' => 'app\addons\food\publics\Publics',
             ],
 
->>>>>>> add1
+
         ];
 
         // custom initialization code goes here

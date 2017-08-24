@@ -7,5 +7,5 @@ return [
     'password' => 'root',
     'charset' => 'utf8',
     'tablePrefix'=>'',
-    //'tablePrefix'=>'pay_cashier_',
+    'tablePrefix'=>'wy_',
 ];

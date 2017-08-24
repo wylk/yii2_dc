@@ -1,0 +1,29 @@
+@charset "utf-8"; 
+/* DIVCSS5-CSS初始化 */ 
+*{margin:0; padding:0;font-style: normal;font:12px/22px "\5B8B\4F53",Arial, Helvetica, sans-serif;list-style:none} 
+img {border: 0; vertical-align:middle} 
+body{color:#000000;background:#FFF;} 
+.clear{clear:both;height:1px;width:100%; overflow:hidden; margin-top:-1px} 
+a{color:#000000;text-decoration:none}  
+a:hover{color:#BA2636} 
+ 
+/*	
+//.fixed_div{width:200px; height: 140px; position:fixed!important;
+//.position:absolute; right:5px; bottom:5px!important; bottom:auto; top:
+//.expression(eval(documentcompatMode && documentcompatMode=='CSS1Compat') ?
+//.documentElementscrollTop+(documentElementclientHeight -
+//.thisclientHeight):documentbodyscrollTop+(documentbodyclientHeight -
+//.thisclientHeight));}
+//控制DIV固定在某个位置，浮动而不动*/
+.topmenu{width:100%;  position:fixed!important;
+.position:absolute; top:0px;  bottom:auto; top:
+.expression(eval(documentcompatMode && documentcompatMode=='CSS1Compat') ?
+.documentElementscrollTop+(documentElementclientHeight -
+.thisclientHeight):documentbodyscrollTop+(documentbodyclientHeight -
+.thisclientHeight));}
+
+ul#supermasternav{ width:100%; height:40px; background:#00A2CA;margin:0 auto} 
+ul#supermasternav li{display:inline; height:40px} 
+ul#supermasternav li a{display:inline-block; padding:0 10px; height:40px; line-height:40px; 
+color:#FFF; font-family:"\5FAE\8F6F\96C5\9ED1"; font-size:14px} 
+ul#supermasternav li a:hover{background:#0095BB} 

@@ -1,0 +1,45 @@
+/*首页*/
+/*
+.home   .logo .advertisement .btns .btn
+.btn-primary .btn-lg .fa .fa-user .fa-user-plus
+ */
+
+
+a{color:#428bca;text-decoration:none}
+.home{position:absolute; z-index:1; text-align:center; width:99%; top:5%;}
+.home .logo{display:inline-block;width:300px;height:95px;background-image: url(../images/gw-logo.png); 	background-size: 70px;	background-repeat: no-repeat;
+	background-position: left;}
+.home .logo span{font-size:2.8em; float:right; padding-right:10%; line-height:200%;}
+.home .advertisement{text-align: center; width:99.9%; margin: 1.37em 0; margin-bottom:10%;}
+.home .advertisement span,
+.logo span{color: #efefef;text-shadow:2px 2px 10px;font-size: 3.5em; display:block;}
+.home #login{position: absolute; top:90%;left:50%;margin: 0px 0 0 -15%; width:30%;height: 30%;}  
+
+/*.home .advertisement{font-size:50px; color:#FFF; margin:5% 0 10% 0;}*/
+.home .btns .btn{margin:0 10px;}
+
+/*按钮样式*/
+
+.btn{display:inline-block;padding:6px 12px;margin-bottom:0;font-size:14px;font-weight:400;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-image:none;border:1px solid transparent;border-radius:4px}
+.btn:hover,.btn:focus{color:#333;text-decoration:none}
+.btn:active,.btn.active{background-image:none;outline:0;-webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,.125);box-shadow:inset 0 3px 5px rgba(0,0,0,.125)}
+.btn.disabled,.btn[disabled],fieldset[disabled] .btn{pointer-events:none;cursor:not-allowed;filter:alpha(opacity=65);-webkit-box-shadow:none;box-shadow:none;opacity:.65}
+.btn-primary{color:#fff;background-color:#428bca;border-color:#357ebd}
+.btn-primary:hover,.btn-primary:focus,.btn-primary:active,.btn-primary.active{color:#fff;background-color:#3071a9;border-color:#285e8e}
+.btn-primary:active,.btn-primary.active,.open>.dropdown-toggle.btn-primary{background-image:none}
+.btn-primary.disabled,.btn-primary[disabled],fieldset[disabled] .btn-primary,.btn-primary.disabled:hover,.btn-primary[disabled]:hover,fieldset[disabled] .btn-primary:hover,.btn-primary.disabled:focus,.btn-primary[disabled]:focus,fieldset[disabled] .btn-primary:focus,.btn-primary.disabled:active,.btn-primary[disabled]:active,fieldset[disabled] .btn-primary:active,.btn-primary.disabled.active,.btn-primary[disabled].active,fieldset[disabled] .btn-primary.active{background-color:#428bca;border-color:#357ebd}
+.btn-lg,.btn-group-lg>.btn{padding:10px 16px;font-size:18px;line-height:1.33;border-radius:6px}
+.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;transform:translate(0, 0)}
+.fa-user-plus:before{content:"\f234"}
+.fa-user:before{content:"\f007"}
+ 
+
+input{width: 70%;height: 18px;margin-bottom: 10px;outline: none;padding: 10px;font-size: 13px;color: #fff;text-shadow:1px 1px 1px;
+	border-top: 1px solid #312E3D;border-left: 1px solid #312E3D;border-right: 1px solid #312E3D;
+	border-bottom: 1px solid #56536A;border-radius: 4px;background-color: #2D2D3F;   
+}
+.login_link{margin-top:50px;}
+.login_link a{color: #FFF; padding-left:10px;}
+
+
+
