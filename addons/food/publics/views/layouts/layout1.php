@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,36 +49,37 @@ $(function(){
 	var postData = {}
 	postData.phone=a1;
 	postData.password=a2;
+	postData._csrf = '<?= Yii::$app->request->csrfToken ?>';
 	if(filename.indexOf("shop") != -1){
-		$.post('?m=plugin&p=public&cn=index&id=food:sit:do_shop_login',postData,function(re){
+		$.post('?r=plugin/publics/default/shop_login',postData,function(re){
 		console.log(re);
 		if(re.error==0)
 			{
-			//alert(re.msg);
-				window.location.href='?m=plugin&p=shop&cn=index&id=food:sit:doindex';
+				alert(re.msg);
+				window.location.href='?r=plugin/shops/default/index';
 			}else if(re.error==1)
 			{
 				alert(re.msg);
 			}else if(re.error==2)
 			{
 				alert(re.msg);
-				window.location.href='?m=plugin&p=public&cn=index&id=food:sit:edit_company&cid='+re.cid;
+				//window.location.href='?m=plugin&p=public&cn=index&id=food:sit:edit_company&cid='+re.cid;
 			}
 			},'json');
 		}else{
 
-		$.post('?m=plugin&p=public&cn=index&id=food:sit:super_login',postData,function(re){
+		$.post('?r=plugin/publics/default/super_login',postData,function(re){
 				if(re.error==0)
 				{
 					alert(re.msg);
-					window.location.href='?m=plugin&p=admin&cn=index1&id=food:sit:test';
+					window.location.href='?r=plugin/stores/homepage/index';
 				}else if(re.error==1)
 				{
 					alert(re.msg);
 				}else if(re.error==2)
 				{
 					alert(re.msg);
-					window.location.href='?m=plugin&p=public&cn=index&id=food:sit:edit_company&cid='+re.cid;
+					window.location.href='?r=plugin/publics/default/edit_company&cid='+re.cid;
 				}
 			},'json');
 		}
