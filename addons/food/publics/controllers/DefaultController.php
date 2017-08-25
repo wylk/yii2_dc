@@ -28,7 +28,7 @@ class DefaultController extends Controller
     //商家申请入住
     public function actionCreate_company()
     {
-    	
+
     	return $this->render('create_company');
 
     }
