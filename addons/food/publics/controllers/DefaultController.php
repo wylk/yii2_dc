@@ -58,8 +58,13 @@ class DefaultController extends Controller
     //商家申请入住
     public function actionCreate_company()
     {
+<<<<<<< HEAD
+
+    	return $this->render('create_company');
+=======
         
         return $this->render('create_company');
+>>>>>>> 2883d34b584c28dcb3df2c62cca91693b73405fe
 
     }
     //员工登录

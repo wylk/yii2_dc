@@ -19,4 +19,9 @@ class DefaultController extends Controller
         $test->runAction('default/index');
        // return $this->render('index');
     }
+   /* public function actionTest()
+    {
+        $test = \YII::$app->getModule('stores');
+        $test->runAction('homepage/index');
+    }*/
 }

@@ -4,7 +4,7 @@ $params = require(__DIR__ . '/params.php');
 $db = require(__DIR__ . '/db.php');
 
 $config = [
-'defaultRoute' => 'admin/default/login',//默认路径
+'defaultRoute' => 'plugin/publics/default/index',//默认路径
     'modules' => [
         'admin' => [
             'class' => 'app\web\modules\admin\Admin',
