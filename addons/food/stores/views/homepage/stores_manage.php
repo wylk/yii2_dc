@@ -5,16 +5,28 @@
 <div class="row header">
     <h3>门店管理</h3>
     <div class="col-md-10 col-sm-12 col-xs-12 pull-right">
-    <form action="?m=plugin&p=admin&cn=index1&id=food:sit:user_list" method="post">
-        <input type="text" class="col-md-5 search" placeholder="请输入门店名称" name="shop_name" value="<?php echo $data1['shop_name']?>">
+    <form  method="post">
+        <input type="hidden" name="_csrf"  value="<?php echo \Yii::$app->request->csrfToken?>">
+        <input type="text" class="col-md-5 search" placeholder="请输入门店名称" name="shop_name" value="<?php if(isset($data1['shop_name']))
+                {
+                    echo $data1['shop_name'];
+                }
+                else
+                    echo '';
+                ?>">
         <input type="submit" value="搜索" style="margin-top: 12px;">
-     </form>
-    <a href="?m=plugin&p=admin&cn=index1&id=food:sit:create_shop" class="btn-flat success pull-right">
+    </form>
+    <a href="<?php echo yii\helpers\Url::to(['homepage/create_shop'])?>" class="btn-flat success pull-right">
     <span>&#43;</span>
     创建门店
     </a>
     </div>
 </div>
+<?php
+    if (Yii::$app->session->hasFlash('info')) {
+                                    echo Yii::$app->session->getFlash('info');
+                                }
+?>
 <!-- Users table -->
 <div class="row">
 <div class="col-md-12">
@@ -49,8 +61,8 @@
          <td class="align-left"><?php echo $v['shop_introduction']?></td>
          <td class="align-left"><?php echo date('Y-m-d H:i:s',$v['add_time'])?></td>
          <td class="align-right">
-         <a href="?m=plugin&p=admin&cn=index1&id=food:sit:shop_edit&bid=<?php echo $v['id']?>" class="btn btn-success" onclick="if(confirm('是否确认修改？')==false)return false;">修改</a>
-        <a href="?m=plugin&p=admin&cn=index1&id=food:sit:shop_del&bid=<?php echo $v['id']?>" class="btn btn-danger" onclick="if(confirm('是否确认删除？')==false)return false;">删除</a>
+          <a href="<?php echo yii\helpers\Url::to(['homepage/shop_edit','bid'=>$v['id']])?>" class="btn btn-success" onclick="if(confirm('是否确认修改？')==false)return false;">修改</a>
+          <a href="<?php echo yii\helpers\Url::to(['homepage/shop_del','bid'=>$v['id']])?>" class="btn btn-danger" onclick="if(confirm('是否确认删除？')==false)return false;">删除</a>
         </td>
         <td><a href="?m=plugin&p=shop&cn=index&id=food:sit:doindex&store_id=<?php echo $v['id']?>" class="btn btn-success">进入店铺</a></td>
 
@@ -60,7 +72,11 @@
 </table>
 </div>
 </div>
-<td colspan="12"><?php echo $pagebar;?></td>
+<?php echo yii\widgets\LinkPager::widget([
+                        'pagination' => $pager,
+                        'prevPageLabel' => '&#8249;',
+                        'nextPageLabel' => '&#8250;',
+                    ]); ?>
 <!-- end users table -->
 </div>
 </div>

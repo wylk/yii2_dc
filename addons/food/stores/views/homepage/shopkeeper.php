@@ -2,13 +2,21 @@
 <!-- settings changer -->
 <div id="pad-wrapper" class="users-list">
 <div class="row header">
-<h3>门店类型</h3>
+<h3>店长列表</h3>
 <div class="col-md-10 col-sm-12 col-xs-12 pull-right">
-<form action="" method="post">
-<input type="text" class="col-md-5 search" placeholder="输入店长真实姓名" name="truename" value="<?php echo $data2['truename']?>">
+<form action="index.php?r=plugin/stores/homepage/shopkeeper" method="post">
+<input type="hidden" name="_csrf" value="<?php echo \Yii::$app->request->csrfToken;?>">
+<input type="text" class="col-md-5 search" placeholder="输入店长真实姓名" name="truename" value="<?php
+ if(isset($data1['truename']))
+    echo $data1['truename'];
+else
+    echo '';
+
+?>">
+
 <input type="submit" value="搜索" style="margin-top: 12px;">
  </form>
-<a href="?m=plugin&p=admin&cn=index1&id=food:sit:create_employee" class="btn-flat success pull-right"><span>&#43;</span>创建店长账号</a>
+<a href="<?php echo yii\helpers\Url::to(['homepage/create_employee'])?>" class="btn-flat success pull-right"><span>&#43;</span>创建店长账号</a>
 </div>
 </div>
 <!-- Users table -->
@@ -56,7 +64,13 @@
 </table>
 </div>
 </div>
-<td colspan="12"><?php echo $pagebar;?></td>
+<td colspan="12">
+<?php echo yii\widgets\LinkPager::widget([
+    'pagination'=>$pager,
+    'prevPageLabel'=>'&#8249',
+    'nextPageLabel'=>'&#8250',
+]);?>
+</td>
 <!-- end users table -->
 </div>
 </div>

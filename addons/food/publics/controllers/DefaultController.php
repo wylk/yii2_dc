@@ -30,15 +30,15 @@ class DefaultController extends Controller
                 if($data1['status']==0){
                     $this->dexit(array('error'=>1,'msg'=>'正在审核，请耐心等待'));
                 }elseif($data1['status']==2){
-              
+
                     $this->dexit(array('error'=>2,'msg'=>'你的审核未通过,请修改','cid'=>$data1['id']));
                 }elseif($data1['status']==1){
                     //验证密码是否正确
                     if(md5($data['password'])!=$data1['password']) {
-                   
+
                         $this->dexit(array('error'=>1,'msg'=>'密码错误'));
                     }else {
-                   
+
                       //密码正确
                         $session = Yii::$app->session;
                         session_set_cookie_params(3600*24);
@@ -48,7 +48,7 @@ class DefaultController extends Controller
                     }
                 }
             }else{
-            
+
                 $this->dexit(array('error'=>1,'msg'=>'手机号码不存在，请先注册'));
             }
         }
@@ -58,19 +58,15 @@ class DefaultController extends Controller
     //商家申请入住
     public function actionCreate_company()
     {
-<<<<<<< HEAD
+
 
     	return $this->render('create_company');
-=======
-        
-        return $this->render('create_company');
->>>>>>> 2883d34b584c28dcb3df2c62cca91693b73405fe
 
     }
     //员工登录
     public function actionShop_login()
     {
- 
+
          if (Yii::$app->request->isPost) {
             $data = Yii::$app->request->post();
             $employee = Food_employee::find()->where(['phone'=>$data['phone']])->one();
@@ -96,7 +92,7 @@ class DefaultController extends Controller
 
     }
 
-    public function dexit($data = '') 
+    public function dexit($data = '')
     {
         if (is_array($data)) {
             echo json_encode($data);

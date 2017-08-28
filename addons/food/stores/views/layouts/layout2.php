@@ -36,7 +36,7 @@
 <ul class="nav navbar-nav pull-right hidden-xs">
     <li class="dropdown">
         <a href="#" class="dropdown-toggle hidden-xs hidden-sm" data-toggle="dropdown">
-        欢迎你，1231
+        欢迎你，<?php echo $this->params['phone'];?>
         <b class="caret"></b>
         </a>
         <!-- <ul class="dropdown-menu">
@@ -52,7 +52,7 @@
         <a href="#" role="button"><i class="icon-cog"></i></a>
     </li> -->
     <li class="settings hidden-xs hidden-sm">
-        <a href="?m=plugin&p=admin&cn=index1&id=food:sit:logout" onclick="if(confirm('是否确定退出？')==false)return false;" role="button">
+        <a href="?r=plugin/stores/homepage/logout" onclick="if(confirm('是否确定退出？')==false)return false;" role="button">
         <i class="icon-share-alt"></i></a>
     </li>
 </ul>
@@ -68,44 +68,44 @@
                     <div class="arrow"></div>
                     <div class="arrow_border"></div>
                 </div>
-                <a href="?r=plugin/stores/homepage/index">
+                <a href="<?php echo yii\helpers\Url::to(['homepage/index'])?>">
                     <i class="icon-home"></i>
                     <span>首页</span>
                 </a>
             </li>
             <li>
-                <a href="?r=plugin/stores/homepage/stores_manage">
+                <a href="<?php echo yii\helpers\Url::to(['homepage/stores_manage'])?>">
                     <i class="icon-signal"></i>
                     <span>门店管理</span>
                 </a>
             </li>
              <li>
-                <a href="?r=plugin/stores/homepage/company_page">
+                <a href="<?php echo yii\helpers\Url::to(['homepage/company_page'])?>">
                     <i class="icon-signal"></i>
                     <span>公司首页</span>
                 </a>
             </li>
             <li>
-                <a href="?r=plugin/stores/homepage/order_list">
+                <a href="<?php echo yii\helpers\Url::to(['homepage/order_list'])?>">
                     <i class="icon-picture"></i>
                     <span>订单中心</span>
                 </a>
             </li>
             <li>
-                <a href="?r=plugin/stores/homepage/stores_type">
+                <a href="<?php echo yii\helpers\Url::to(['homepage/stores_type'])?>">
                     <i class="icon-calendar-empty"></i>
                     <span>门店类型</span>
                 </a>
             </li>
             <li>
-                <a href="?r=plugin/stores/homepage/shopkeeper">
+                <a href="<?php echo yii\helpers\Url::to(['homepage/shopkeeper'])?>">
                     <!-- <i class="icon-cog"></i> -->
                      <i class="icon-group"></i>
                     <span>店长管理</span>
                 </a>
             </li>
             <li>
-                <a href="?r=plugin/stores/homepage/payment">
+                <a href="<?php echo yii\helpers\Url::to(['homepage/payment'])?>">
                     <!-- <i class="icon-cog"></i> -->
                      <i class="icon-tags"></i>
                     <span>支付配置</span>
