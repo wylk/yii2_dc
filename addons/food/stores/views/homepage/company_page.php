@@ -68,14 +68,13 @@
             <div class="table-state-tables">
                 <div class="col-xs-12">
             <!--  餐桌 -->
-
-
                     <div class="state-table">
                         <a class="idle round" href="javascript:;"
                         data-remote="">
                             <div class="state">
                                 <div id="qr-code-autopay">
-                                   <img src="?m=plugin&p=admin&cn=index1&id=food:sit:test12"/>
+                                   <!-- <img src="?m=plugin&p=admin&cn=index1&id=food:sit:test12"/> -->
+                                   <img src="https://lepay.51ao.com/pay/api/apiqrcode.php?url=<?php echo base64_encode($url)?>"/>
                                 </div>
                             </div>
                         </a>

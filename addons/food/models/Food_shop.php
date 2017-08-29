@@ -5,7 +5,7 @@ use yii\db\ActiveRecord;
 use Yii;
 class Food_shop extends ActiveRecord
 {
-<<<<<<< HEAD
+
     // public function searchStore($data)
     // {
     //     // 判断是否存在门店名称
@@ -22,7 +22,5 @@ class Food_shop extends ActiveRecord
     //     //一对多
     //     return $this->hasOne(Food_shop_type::className(),['id'=>'type_id'])->asArray();
     // }
-=======
-	
->>>>>>> d29f3a73700917ca4b17b076d028e676279acca2
+
 }

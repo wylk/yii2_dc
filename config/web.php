@@ -2,7 +2,7 @@
 
 $params = require(__DIR__ . '/params.php');
 $db = require(__DIR__ . '/db.php');
-
+Yii::$classMap['QRcode'] = '@app/test/QRcode.php';
 $config = [
 'defaultRoute' => 'plugin/publics/default/index',//默认路径
     'modules' => [

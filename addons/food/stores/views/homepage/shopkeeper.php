@@ -55,8 +55,9 @@ else
             ?></td>
             <td><?php echo $v['remark']?></td>
             <td>
-            <a href="?m=plugin&p=admin&cn=index1&id=food:sit:employee_edit&bid=<?php echo $v['id']?>"><button class="btn btn-primary" onclick="if(confirm('是否确认修改？')==false)return false;">修改</button></a>
-            <a href="?m=plugin&p=admin&cn=index1&id=food:sit:employee_del&bid=<?php echo $v['id']?>"><button class="btn btn-danger" onclick="if(confirm('是否确认删除？')==false)return false;">删除</button></a>
+
+             <a href="<?php echo yii\helpers\Url::to(['homepage/employee_edit','bid'=>$v['id']])?>"><button class="btn btn-primary" onclick="if(confirm('是否确认修改？')==false)return false;">修改</button></a>
+             <a href="<?php echo yii\helpers\Url::to(['homepage/employee_del','bid'=>$v['id']])?>"><button class="btn btn-danger" onclick="if(confirm('是否确认删除？')==false)return false;">删除</button></a>
             </td>
         </tr>
         <?php endforeach;}else{?>暂无数据<?php };?>

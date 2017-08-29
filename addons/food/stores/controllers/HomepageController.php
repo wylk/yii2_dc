@@ -10,7 +10,10 @@ use yii\data\Pagination;
 use app\addons\food\models\UploadForm;
 use yii\web\UploadedFile;
 use app\addons\food\models\Food_employee;
-
+use app\vendor\org\CommonApi;
+use app\addons\food\models\Food_payment;
+// use app\vendor\org\Phpqrcode;
+// use app\test\QRcode;
 /**
  * Default controller for the `stores` module
  */
@@ -183,8 +186,21 @@ class HomepageController extends CommonController
     }
     public function actionCompany_page()
     {
+        $url='http://dc.51ao.com/?m=plugin&p=wap&cn=index&id=food:sit:home_page&cid='.$this->cid;
         $this->layout="layout2";
-        return $this->render('company_page');
+        return $this->render('company_page',['url'=>$url]);
+    }
+    public function actionUrl()
+    {
+
+        require_once('C:\Users\1234\yii2_dc\web/Phpqrcode.php');
+        $a=new QRcode();
+        // var_dump($a);
+        // die;
+        // $url='http://yiitest1.com/index.php?r=plugin/stores/homepage/company_page&cid='.$this->cid;
+
+        $url="http://www.baidu.com";
+        $a::png($url);
     }
     public function actionOrder_list()
     {
@@ -351,16 +367,135 @@ class HomepageController extends CommonController
             {
                 $this->dexit(array('error'=>1,'msg'=>'登录账号已存在'));
             }
-
+            $password=$post['password'];
+            $post['password']=md5($post['password']);
+            $post['create_time']=time();
+            $post['company_id']=$this->cid;
+            //插入到乐呗用户表
+            $user=new CommonApi();
+            $res=$user->add_user($password,$post['username'],'','','');
+            // $this->dexit(array('error'=>1,'msg'=>$res));
+            if($res['return_code']=='success')
+            {
+                $post['uid']=$res['id'];
+                unset($post['_csrf']);
+                // $this->dexit(array('error'=>1,'msg'=>$post));
+                if(Yii::$app->db->createCommand()->insert('food_employee',$post)->execute())
+                {
+                    $this->dexit(array('error'=>0,'msg'=>'添加成功'));
+                }else
+                {
+                    $this->dexit(array('error'=>1,'msg'=>'添加失败，请稍后再试'));
+                }
+            }else
+            {
+                $this->dexit(array('error'=>1,'msg'=>$res['content']));
+            }
         }
         $data=Food_shop::find()->where(['company_id'=>$this->cid])->all();
         $this->layout="layout2";
         return $this->render('create_employee',['data'=>$data]);
     }
+    public function actionEmployee_edit()
+    {
+        if(Yii::$app->request->isPost)
+        {
+            $post=Yii::$app->request->post();
+            $data3=Food_employee::find()->where('id=:bid',[':bid'=>$post['id']])->asArray()->one();
+            if($data3['username']!=$post['username'])
+            {
+                //判断登录名的唯一性
+                if(Food_employee::find()->where('username=:user',[':user'=>$post['username']])->asArray()->one())
+                {
+                    $this->dexit(array('error'=>1,'msg'=>'用户名已存在'));
+                }
+            }
+            $post['password']=md5($post['password']);
+            unset($post['_csrf']);
+            // $this->dexit(array('error'=>1,'msg'=>$post['id']));
+            if(Yii::$app->db->createCommand()->update('food_employee',$post,'id='.$post['id'])->execute())
+            {
+                $this->dexit(array('error'=>0,'msg'=>'修改成功'));
+            }else
+            {
+                $this->dexit(array('error'=>1,'msg'=>'修改失败，请稍后再试'));
+            }
+            $this->dexit(array('error'=>1,'msg'=>$post));
+        }
+        $data=Yii::$app->request->get();
+        $data1=Food_employee::find()->where('id=:bid',[':bid'=>$data['bid']])->asArray()->one();
+        $data2=Food_shop::find()->where('company_id=:cid',[':cid'=>$this->cid])->asArray()->all();
+        $this->layout="layout2";
+        return $this->render('employee_edit',['data1'=>$data1,'data2'=>$data2]);
+    }
+    public function actionEmployee_del()
+    {
+        $data=Yii::$app->request->get();
+        if(Yii::$app->db->createCommand()->delete('food_employee','id='.$data['bid'])->execute())
+        {
+            echo "<script>alert('删除成功');location.href='?r=plugin/stores/homepage/shopkeeper';</script>";
+        }else
+        {
+            echo "<script>alert('删除失败，请稍后再试');location.href=history.go(-1);</script>";
+        }
+    }
     public function actionPayment()
     {
+        $data=Food_payment::find()->where('cid=:company_id',[':company_id'=>$this->cid])->asArray()->all();
         $this->layout="layout2";
-        return $this->render('payment');
+        return $this->render('payment',['data'=>$data]);
+    }
+    public function actionAdd_payment()
+    {
+        if(Yii::$app->request->isPost)
+        {
+            $post=Yii::$app->request->post();
+            $post['cid']=$this->cid;
+            $post['addtime']=time();
+            unset($post['_csrf']);
+            if(Yii::$app->db->createCommand()->insert('food_payment',$post)->execute())
+            {
+                $this->dexit(array('error'=>0,'msg'=>'添加成功'));
+            }else
+            {
+                $this->dexit(array('error'=>1,'msg'=>'添加失败，请稍后再试'));
+            }
+        }
+        $this->layout="layout2";
+        return $this->render('add_payment');
+    }
+    public function actionPayment_edit()
+    {
+        if(Yii::$app->request->isPost)
+        {
+            $post=Yii::$app->request->post();
+            unset($post['_csrf']);
+            if(Yii::$app->db->createCommand()->update('food_payment',$post,'id='.$post['id'])->execute())
+            {
+                $this->dexit(['error'=>0,'msg'=>'修改成功']);
+            }else
+            {
+                $this->dexit(array('error'=>1,'msg'=>'请至少选择一项修改'));
+            }
+        }
+        $data=Yii::$app->request->get();
+        $data1=Food_payment::find()->where('id=:pid',[':pid'=>$data['id']])->asArray()->one();
+        $this->layout="layout2";
+        return $this->render('payment_edit',['data1'=>$data1]);
+    }
+    public function actionPayment_del()
+    {
+        $data=Yii::$app->request->get();
+        $data1=Food_payment::findOne($data['id']);
+        if($data1->delete())
+        {
+            echo "<script>alert('删除成功');location.href='?r=plugin/stores/homepage/payment'</script>";
+            die;
+        }else
+        {
+            echo "<script>alert('删除失败，请稍后再试');location.href=history.go(-1);</script>";
+            die;
+        }
     }
     public function actionLogout()
     {
