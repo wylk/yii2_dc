@@ -56,7 +56,7 @@ $(function(){
 		if(re.error==0)
 			{
 				alert(re.msg);
-				window.location.href='?r=plugin/shops/default/index';
+				window.location.href='?r=plugin/shops/index/index';
 			}else if(re.error==1)
 			{
 				alert(re.msg);
