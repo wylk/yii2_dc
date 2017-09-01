@@ -36,7 +36,7 @@
                     <div  style="border:1px solid #dae3e9; min-height: 500px; margin: 19px 19px;padding-top:20px">
                     <ul class="ul1">
                         <?php foreach ($auth1 as $k => $value) {?>
-                            <li  <?php if(($k+2) == 2){ echo 'style="width:20%;text-align: center;font-size: 16px;min-height:162px"';}else{echo 'style="width:20%;text-align: center;font-size: 16px;"';}?>>
+                            <li  <?php if(($k+2) == 2){ echo 'style="width:20%;text-align: center;font-size: 16px;min-height:122px"';}else{echo 'style="width:20%;text-align: center;font-size: 16px;"';}?>>
                                <input name="auth_id[]" type="checkbox" value="<?php echo $value['id'];?>" id='pid' class="id<?php echo  $value['id'];?>"/><?php echo $value['auth_name'];?>
                             </li>  
                             <!-- <li style="width:20%;text-align: center;font-size: 16px;">

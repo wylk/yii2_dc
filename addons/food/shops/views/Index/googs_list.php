@@ -19,7 +19,7 @@ use yii\widgets\LinkPager;
                         top: 10px;
                         left: 0px;" id="search">
                     </form>
-                    <a href="index.php?m=plugin&p=shop&cn=index&id=food:sit:do_goods_add" class="btn-flat success pull-right">
+                    <a href="?r=plugin/shops/index/do_goods_add" class="btn-flat success pull-right">
                         <span>&#43;</span>
                        添加商品
                     </a>
@@ -150,7 +150,7 @@ use yii\widgets\LinkPager;
                             <td>
                               <a href="javascript:;" id="del"  data-id="<?php echo $v['id']?>">删除</a>
                               |
-                              <a href="/index.php?m=plugin&p=shop&cn=index&id=food:sit:do_goods_edit&cid=<?php echo $v['id']?>" onclick="if(confirm('是否确定编辑？')==false)return false;">编辑</a>
+                              <a href="?r=plugin/shops/index/do_goods_edit&cid=<?php echo $v['id']?>" onclick="if(confirm('是否确定编辑？')==false)return false;">编辑</a>
                             </td>
                         </tr>
                         <!-- row -->
