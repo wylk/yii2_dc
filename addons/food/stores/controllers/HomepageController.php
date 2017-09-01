@@ -12,6 +12,8 @@ use yii\web\UploadedFile;
 use app\addons\food\models\Food_employee;
 use app\vendor\org\CommonApi;
 use app\addons\food\models\Food_payment;
+use app\addons\food\models\UploadForm2;
+use app\addons\food\models\UploadForm3;
 // use app\vendor\org\Phpqrcode;
 // use app\test\QRcode;
 /**
@@ -23,6 +25,10 @@ class HomepageController extends CommonController
      * Renders the index view for the module
      * @return string
      */
+    // public function init()
+    // {
+    //     $this->enableCsrfValidation = false;
+    // }
     public $layout = false;
 
     public function actionIndex()
@@ -62,16 +68,25 @@ class HomepageController extends CommonController
     }
     public function actionTest()
     {
-        $model = new UploadForm();
+        $model = new UploadForm3();
 
         if (Yii::$app->request->isPost) {
-            $model->imageFile = UploadedFile::getInstance($model, 'imageFile');
-            if ($model->upload($this->cid,'shop_logo')) {
-                // 文件上传成功
-                echo $model->file_path;
-            }
+            $this->dexit(array('error'=>1,'msg'=>1));
+            //  $model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
+            // if ($model->upload($this->cid,'logo')) {
+            //     // 文件上传成功
+            //     // echo 'success';
+            //     echo $model->field_path[0]."<br>";
+            //     echo $model->field_path[1];
+
+            // }else
+            // {
+            //     echo 'fail';
+            // }
         }
         return $this->render('test',['model'=>$model]);
+
+
         // $data['score']=101;
         // $data['age']=34;
         // $return=Yii::$app->db->createCommand()->update('test', $data, 'id=1')->execute();
@@ -84,31 +99,34 @@ class HomepageController extends CommonController
         // }
         //yii添加
         // $model=new Test;
-        // $post=Yii::$app->request->get();//更改id=1的数据
-        // $model=Test::find()->where(['id'=>$post['id']])->one();
-        // // var_dump($model);
-        // // die;
-        // $model['score']=$post['score'];
-        // $model['age']=$post['age'];
-        // // $data['score']=45;
-        // // $model['score']=66;
+        // // $post=Yii::$app->request->get();//更改id=1的数据
+        // // $model=Test::find()->where(['id'=>$post['id']])->one();
+        // // // var_dump($model);
+        // // // die;
+        // // $model['score']=$post['score'];
+        // // $model['age']=$post['age'];
+        // // // $data['score']=45;
+        // $model['score']=66;
+        // $model['age']=13;
         // if($model->save())
         // {
-        //     echo 'success';
+        //     // echo 'success';
+        //     $id = $model->attributes['id'];
+        //     echo $id;
         // }else
         // {
         //     echo 'fail';
         // }
-        // $data['score']=100;
+        $data['score']=100;
         // $data['name']=50;
-        // $data['age']=60;
-        // if(Yii::$app->db->createCommand()->insert('test',$data)->execute())
-        // {
-        //     echo 'success';
-        // }else
-        // {
-        //     echo 'fail';
-        // }
+        $data['age']=60;
+        if(Yii::$app->db->createCommand()->insert('test',$data)->execute())
+        {
+           echo Yii::$app->db->getLastInsertID();
+        }else
+        {
+            echo 'fail';
+        }
     }
     public function actionCreate_shop()
     {
@@ -186,21 +204,9 @@ class HomepageController extends CommonController
     }
     public function actionCompany_page()
     {
-        $url='http://dc.51ao.com/?m=plugin&p=wap&cn=index&id=food:sit:home_page&cid='.$this->cid;
+        $url='http://yiitest1.com/index.php?r=plugin/users/default/homepage&cid='.$this->cid;
         $this->layout="layout2";
         return $this->render('company_page',['url'=>$url]);
-    }
-    public function actionUrl()
-    {
-
-        require_once('C:\Users\1234\yii2_dc\web/Phpqrcode.php');
-        $a=new QRcode();
-        // var_dump($a);
-        // die;
-        // $url='http://yiitest1.com/index.php?r=plugin/stores/homepage/company_page&cid='.$this->cid;
-
-        $url="http://www.baidu.com";
-        $a::png($url);
     }
     public function actionOrder_list()
     {

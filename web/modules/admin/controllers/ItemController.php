@@ -11,9 +11,11 @@ use app\web\modules\models\ItemForm;
 use yii\helpers\Json;
 use app\web\modules\models\Menu;
 // use app\web\modules\common\LinkPages;
-use app\web\modules\models\DbManager;
+// use app\web\modules\models\DbManager;
 use common\core\rbac;
 use yii\web\Controller;
+// use yii\rbac\DbManager;
+// use yii\rbac\DbManager;
 /**
  * 权限控制器
  */
@@ -46,9 +48,8 @@ class ItemController extends Controller
         //查询语句
         $query = $model->find()->where(['type'=>1])->orderBy( 'created_at DESC');  //列表只显示角色
         $data = $model->getPages($query,$curPage,$pageSize,$search);
-        // var_dump($data);
-        // die;
         $pages = new Pagination([ 'totalCount' =>$data[ 'count'], 'pageSize' => $pageSize]);
+        // $this->layout="layout2";
         $this->layout="layout1";
         return $this->render('index',['pages'=>$pages,'data'=>$data,'type' => $type]);
     }
@@ -68,7 +69,7 @@ class ItemController extends Controller
         $query = $model->find()->where(['type'=>2])->orderBy( 'created_at DESC');  //列表只显示角色
         $data = $model->getPages($query,$curPage,$pageSize,$search);
         $pages = new Pagination([ 'totalCount' =>$data[ 'count'], 'pageSize' => $pageSize]);
-         $this->layout="layout1";
+        $this->layout="layout1";
         return $this->render('index',['pages'=>$pages,'data'=>$data,'type' => $type]);
     }
 
@@ -96,7 +97,7 @@ class ItemController extends Controller
             if (is_array($rules)) {
                 foreach ($rules as $rule) {
                     /* 更新auth_rule表 与 auth_item表 */
-                    $rbac = new DbManager();
+                    $rbac = new rbac\DbManager();
                     $rbac->saveRule($rule);
                     /* 更新auth_item_child表 */
                     $rbac->saveChild($parent->name, $rule);
@@ -105,7 +106,7 @@ class ItemController extends Controller
 
             return $this->redirect(['item/set','role'=>$role]);
         } else {
-             $this->layout="layout1";
+            $this->layout="layout1";
             return $this->render('set', [
                 'permission' => $permission,
                 'items'=>$items,
@@ -147,8 +148,7 @@ class ItemController extends Controller
         if ($model->load(Yii:: $app-> request->post())) {
             if($model->validate()){
                 $model->updateItem($id);
-                // return $this->redirect([ 'view', 'id' => $model->name]);
-                 return $this->redirect(['item/index']);
+                return $this->redirect([ 'view', 'id' => $model->name]);
             }
         }
         $this->layout="layout1";
@@ -212,3 +212,4 @@ class ItemController extends Controller
         return $tree;
     }
 }
+

@@ -17,7 +17,7 @@ class IndexController extends CommonController
         $data = new Common();
         $data->index();
     }
-   
+
     public function actionIndex()
     {
     	//$session = Yii::$app->session;
@@ -33,7 +33,7 @@ class IndexController extends CommonController
     	$this->layout = 'layout2';
         if (isset(Yii::$app->session['cid']) || Yii::$app->session['employee']['role_id'] == 0) {
         	$authInfoA = Food_store_auth::find()->where(['auth_level'=>0,'is_show'=>1])->asArray()->orderBy('id asc')->all();
-        	$authInfoB = Food_store_auth::find()->where(['auth_level'=>1,'is_show'=>1])->asArray()->orderBy('id asc')->all(); 
+        	$authInfoB = Food_store_auth::find()->where(['auth_level'=>1,'is_show'=>1])->asArray()->orderBy('id asc')->all();
             //$authInfoA = model('store_auth')->where(array('auth_level'=>0,'is_show'=>1))->order('id asc')->select();
             //$authInfoB = model('store_auth')->where(array('auth_level'=>1,'is_show'=>1))->order('id asc')->select();
         }else{
@@ -115,7 +115,7 @@ class IndexController extends CommonController
             $shop = Food_shop::find()->where(['id'=>Yii::$app->session['employee']['shop_id']])->asArray()->one();
             $data['company_id'] = $shop['company_id'];
             //添加到用户表
-            $user = new CommonApi();;
+            $user = new CommonApi();
             $res = $user->add_user($password,$data['username'],'','','');
             $this->dexit(array('error'=>1,'msg'=>$res));
             die;

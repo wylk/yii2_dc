@@ -4,6 +4,7 @@ $params = require(__DIR__ . '/params.php');
 $db = require(__DIR__ . '/db.php');
 Yii::$classMap['QRcode'] = '@app/test/QRcode.php';
 $config = [
+
 'defaultRoute' => 'plugin/publics/default/index',//默认路径
     'modules' => [
         'admin' => [
@@ -51,8 +52,14 @@ $config = [
             ],
         ],
         'db' => $db,
-        'authManager' => [
+        // 'authManager' => [
+        //     'class' => 'yii\rbac\DbManager',
+        // ],
+         'authManager' => [
             'class' => 'yii\rbac\DbManager',
+            'itemTable' => 'auth_item',
+            'assignmentTable' => 'auth_assignment',
+            'itemChildTable' => 'auth_item_child',
         ],
         /*
         'urlManager' => [

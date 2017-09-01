@@ -169,6 +169,21 @@ class CommonApi
 		return json_decode(json_encode(simplexml_load_string($xml, 'SimpleXMLElement', LIBXML_NOCDATA)), true);
 	}
 
+	 public function getinfo($url)
+    {
+        $api='https://lepay.51ao.com/pay/api/wx_location.php';
+        //构造参数
+        $data=[
+        'appid'=>$this->appid,
+        'mch_id'=>$this->mch_id,
+        'url'=>$url,
+        ];
+        $xml = $this->arr_xml($data,$this->key);
+        $ret=$this->post($api,$xml);
+        $ret =  json_decode(json_encode(simplexml_load_string($ret, 'SimpleXMLElement', LIBXML_NOCDATA)), true);
+        return $ret;
+        }
+
 	public function post($url, $data, $isHttps = TRUE)
     {
         // 创建curl对象
@@ -208,5 +223,5 @@ class CommonApi
         return json_decode(json_encode(simplexml_load_string($ret, 'SimpleXMLElement', LIBXML_NOCDATA)), true);
 
     }
-	
+
 }

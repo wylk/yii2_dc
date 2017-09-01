@@ -80,7 +80,7 @@
                         </a>
 
                         <div class="name overflow-ellipsis">
-                        <a download href="?m=plugin&p=admin&cn=index1&id=food:sit:test12" target="_blank" ><span class="glyphicon glyphicon-download-alt" style="float: left;margin-left:6px; " ></span></a>
+                        <a download href="https://lepay.51ao.com/pay/api/apiqrcode.php?url=<?php echo base64_encode($url)?>" target="_blank" ><span class="glyphicon glyphicon-download-alt" style="float: left;margin-left:6px; " ></span></a>
                         </div>
                     </div>
 

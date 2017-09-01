@@ -2,8 +2,8 @@
 namespace app\addons\food\models;
 use yii\base\Model;
 use yii\web\UploadedFile;
-use yii\db\ActiveRecord;
-class UploadForm extends ActiveRecord
+// use yii\db\ActiveRecord;
+class UploadForm extends Model
 {
     public $imageFile;
     public $path;

@@ -1,33 +1,33 @@
 
 html{color:#000;background:#FFF;}
-body{font-family:'微软雅黑','Microsoft Yahei', sans-serif;} 
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form, 
+body{font-family:'微软雅黑','Microsoft Yahei', sans-serif;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,
 fieldset,input,textarea,p,blockquote,th,td {
-margin:0; 
-padding:0; 
+margin:0;
+padding:0;
 font-size: .6em;
-} 
-table { 
-border-collapse:collapse; 
-border-spacing:0; 
-} 
-fieldset,img { 
-border:0; 
-} 
-address,caption,cite,code,dfn,em,strong,th,var { 
-font-style:normal; 
-font-weight:normal; 
-} 
-ol,ul { 
-list-style:none; 
-} 
-caption,th { 
-text-align:left; 
-} 
-h1,h2,h3,h4,h5,h6 { 
-font-size:100%; 
-font-weight:normal; 
-} 
+}
+table {
+border-collapse:collapse;
+border-spacing:0;
+}
+fieldset,img {
+border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+font-style:normal;
+font-weight:normal;
+}
+ol,ul {
+list-style:none;
+}
+caption,th {
+text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+font-size:100%;
+font-weight:normal;
+}
 a{ text-decoration:none;}
 
 .total{ color:#FF5151;}
@@ -87,19 +87,19 @@ footer ul li a p.cur{ color:#face7e; }
 #open{ display:none; background:rgba(0,0,0,0.5); height:100%; width:100%; position:fixed; top:0%; left:0%; z-index:1000;}
 #open .white_content {
 		 	display:none;
-            position: absolute; 
-            top: 25%; 
-            left:15%; 	
-            width: 60%; 
-            height:26%; 
-            padding: 20px; 
-            background-color:#fff; 
-            z-index:1002; 
+            position: absolute;
+            top: 25%;
+            left:15%;
+            width: 60%;
+            height:26%;
+            padding: 20px;
+            background-color:#fff;
+            z-index:1002;
             overflow:hidden;
 			text-align:center;
 		    border-radius:5px;
-			color:#7e2e14; 
-        } 
+			color:#7e2e14;
+        }
 #open .white_content select{ width:90px; margin-bottom:36px;}
 #open .white_content a.close{ position:absolute; top:5px; right:5px;}
 #open .white_content a.close img{ width:18px; height:18px;}
@@ -124,7 +124,7 @@ ul.menu li a.add img{width:30px; height:30px; border:none;}
 
 /************************ 菜谱点餐****************************************/
 .nav-lf{ position:absolute;}
-.nav-lf ul li b{ position:absolute; top:0.05rem; right:0.05rem; display:none; width:0.2rem; height:0.2rem; line-height:0.2rem; font-size:0.15rem; color:#fff; background-color:#FF5151; border-radius:0.1rem;}
+.nav-lf ul li b{ position:absolute; top:0.05rem; right:0.05rem; display:none; width:0.2rem; height:0.2rem; line-height:0.2rem; font-size:0.15rem; color:#fff; background-color:#FF5151; border-radius:0.1rem;z-index: 9999;}
 .nav-lf ul.classes{ float:left;  text-align:center;color:#7e2e14; margin-bottom:150px; margin-right:2%; box-sizing:border-box;}
 .nav-lf ul.classes a{color:#7e2e14; font-size: 0.2rem;}
 

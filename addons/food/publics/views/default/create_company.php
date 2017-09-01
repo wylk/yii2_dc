@@ -1,3 +1,7 @@
+<?php
+use yii\widgets\ActiveForm;
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,8 +25,19 @@
     <div class="page-header">
     <h2>请上传公司信息</h2>
 </div>
-    <form id="defaultForm" method="post" class="form-horizontal" action="?r=plugin/publics/default/create_company" enctype="multipart/form-data">
+   <!--  <form id="defaultForm" method="post" class="form-horizontal" action="?r=plugin/publics/default/create_company" enctype="multipart/form-data"> -->
+    <?php
+    $form=ActiveForm::begin([
+        'id'=>'defaultForm',
+        'options'=>[
+        'class'=>'form-horizontal',
+        'enctype'=>'multipart/form-data',
+            ],
 
+        ]);
+
+    ?>
+    <input type="hidden" name="_csrf" value="<?php echo \Yii::$app->request->csrfToken;?>">
   <div class="form-group">
     <label for="company_name">公司名称</label>
     <div class="col-lg-12">
@@ -48,9 +63,10 @@
     </div>
   </div>
    <div class="form-group">
-    <label for="licence_path">营业执照</label>
+  <!--   <label for="licence_path">营业执照</label> -->
      <div class="col-lg-12">
-    <input type="file" id="licence_path" name="licence_path">
+    <?php echo $form->field($model,'imageFiles[]')->fileInput(['multiple' => true])->label('营业执照')?>
+    <!-- <input type="file" id="licence_path" name="licence_path"> -->
     </div>
 
   </div>
@@ -61,18 +77,20 @@
     </div>
   </div>
   <div class="form-group">
-    <label for="frontal_view">身份证正面照</label>
+   <!--  <label for="frontal_view">身份证正面照</label> -->
     <div class="col-lg-12">
-    <input type="file" id="frontal_view" name="frontal_view">
+    <?php echo $form->field($model,'imageFiles[]')->fileInput(['multiple' => true])->label('身份证正面照');?>
+    <!-- <input type="file" id="frontal_view" name="frontal_view"> -->
     </div>
 
   </div>
 
 
   <div class="form-group">
-    <label for="back_view">身份证反面照</label>
+  <!--   <label for="back_view">身份证反面照</label> -->
     <div class="col-lg-12">
-    <input type="file" id="back_view" name="back_view">
+    <?php echo $form->field($model,'imageFiles[]')->fileInput(['multiple' => true])->label('身份证反面照');?>
+    <!-- <input type="file" id="back_view" name="back_view"> -->
     </div>
 
   </div>
@@ -111,7 +129,8 @@
   </div>
   <button type="submit" class="btn btn-default">确定提交</button>
   <button type="button" class="btn btn-info" id="resetBtn">重置表单</button>
-</form>
+  <?php ActiveForm::end();?>
+<!-- </form> -->
 <br><br><br><br><br><br>
 </div>
 </section>
@@ -142,10 +161,10 @@ $(document).ready(function(){
                     },
                     threshold:4,
                     remote:{
-                        url:"?m=plugin&p=public&cn=index&id=food:sit:validate_company_name",
+                        url:"?r=plugin/publics/default/validate_company_name&_csrf=<?php echo \Yii::$app->request->csrfToken;?>",
                         message:"公司名称已存在",
                         delay:2000,
-                        type:"POST"
+                        type:"GET"
                     },
                     regexp:{
                         regexp:/^([A-Za-z]|[\u4E00-\u9FA5]|[\u4e00-\u9fa5a-zA-Z])+$/,
@@ -291,7 +310,7 @@ $(document).ready(function(){
 
 </script>
 <script type="text/javascript">
-    
+
       var itime = 60;//定义一个变量，倒计时初始化，从59秒开始
         function getTime(){
             if(itime>=0){
@@ -325,5 +344,5 @@ $(document).ready(function(){
                 }
             },'json');
         });
-});       
+});
 </script>
