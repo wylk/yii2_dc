@@ -23,6 +23,8 @@
     <!-- this page specific styles -->
     <link rel="stylesheet" href="<?php echo FOOD_PATH;?>css/compiled/index.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php echo FOOD_PATH;?>sweetalert/sweetalert.css" type="text/css" media="screen" />
+    <link href="<?php echo FOOD_PATH?>css/reset.css" type="text/css"  rel="stylesheet" />
+    <link href="<?php echo FOOD_PATH?>css/style.css" type="text/css"  rel="stylesheet" />
     <script src="<?php echo FOOD_PATH;?>sweetalert/sweetalert.min.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js">
     </script>

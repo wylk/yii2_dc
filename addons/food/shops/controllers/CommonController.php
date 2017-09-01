@@ -11,7 +11,7 @@ use yii\web\Controller;
 class CommonController extends Controller
 {
     public $layout = false;
-
+    public $mid = '';
     public function init()
     {
     	$session = Yii::$app->session;
@@ -19,7 +19,9 @@ class CommonController extends Controller
         /*if (Yii::$app->session['employee'] != true) {
             return $this->redirect(['?r=plugin/publics/default/index']);
         }*/
+        
         $this->layout = 'layout1';
+        $this->mid = Yii::$app->session['employee']['shop_id'];
     }
 
 
@@ -38,5 +40,28 @@ class CommonController extends Controller
             echo $data;
         }
         exit();
+    }
+
+    public function arr2_arr1($arrdata,$v)
+    {
+        $arrs = array();
+        foreach ($arrdata as $key => $value) {
+            $arrs[] = $value[$v];
+        }
+        return $arrs;
+    }
+
+    public function clear_html($array) 
+    {
+        if (!is_array($array))
+            return trim(htmlspecialchars($array, ENT_QUOTES));
+            foreach ($array as $key => $value) {
+                if (is_array($value)) {
+                    $this->clear_html($value);
+                } else {
+                    $array[$key] = trim(htmlspecialchars($value, ENT_QUOTES));
+                }
+            }
+        return $array;
     }
 }

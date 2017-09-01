@@ -2,7 +2,10 @@
 namespace app\addons\food\models;
 use yii\base\Model;
 use yii\web\UploadedFile;
+<<<<<<< HEAD
 // use yii\db\ActiveRecord;
+=======
+>>>>>>> add1
 class UploadForm extends Model
 {
     public $imageFile;
@@ -33,6 +36,25 @@ class UploadForm extends Model
                 }
                 $this->file_path=$this->path . date('Ymd').$this->imageFile->baseName .uniqid(). '.' . $this->imageFile->extension;
                 if($this->imageFile->saveAs($this->file_path)){
+                    return true;
+                }else {
+                    return false;
+                }
+            }
+
+    }
+
+    public function goodsUpload($cid,$type)
+    {
+        if ($this->validate()) {
+            $this->path='./uploads/images/goods/'.$cid.'/';
+            if(!file_exists($this->path))
+            {
+                mkdir($this->path);
+            }
+            $this->file_path=$this->path.$this->imageFile->baseName . '.' . $this->imageFile->extension;
+            //$this->file_path=$this->path . date('Ymd').$this->imageFile->baseName . '.' . $this->imageFile->extension;
+            if($this->imageFile->saveAs($this->file_path)){
                 return true;
             }else {
                 return false;
