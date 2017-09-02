@@ -231,6 +231,7 @@ class DefaultController extends Controller
         $session = \Yii::$app->session;
         if (Yii::$app->session['cid']) {
             $session->remove('employee');
+            $session->remove('shop_id');
                 header('Location:index.php?r=plugin/stores/homepage/index');die;
 
             }else{

@@ -19,8 +19,15 @@ class CommonController extends Controller
     {
         if(isset(Yii::$app->request->get()['store_id'])){
             $this->mid = Yii::$app->request->get('store_id');
+            Yii::$app->session['shop_id'] = $this->mid;
         }else{
-            $this->mid = Yii::$app->session['employee']['shop_id'];
+            if(Yii::$app->session['employee']['shop_id']){
+                $this->mid = Yii::$app->session['employee']['shop_id'];
+            }
+            if (Yii::$app->session['shop_id']) {
+                $this->mid = Yii::$app->session['shop_id'];
+            }
+            
         }
 
         list($sss1,$dssd,$a,$c) = explode('/',Yii::$app->request->get('r')); 
@@ -30,8 +37,8 @@ class CommonController extends Controller
         if(Yii::$app->session['cid']){
             $cid = Yii::$app->session['cid'];
             $shops = Food_shop::find()->where(['company_id'=>$cid,'id'=>$this->mid])->asArray()->one();
-
             if($shops == false && strpos($allAC,$nowAC) == false){
+          
                 echo "<script>alert('非法访问！');window.history.go(-1);</script>";die;
             }
 

@@ -125,10 +125,9 @@ class IndexController extends CommonController
 
             $time = time();
             $data['create_time'] = $time;
-            //Yii::$app->session['employee']['shop_id']
-            $shop = Food_shop::find()->where(['id'=>$this->mid])->asArray()->one();
-
-            $data['company_id'] = $shop['company_id'];
+            //Yii::$app->session['employee']['company_id']
+            //$shop = Food_shop::find()->where(['id'=>$this->mid])->asArray()->one();
+            $data['company_id'] = Yii::$app->session['employee']['company_id'];
             //添加到用户表
             $user = new CommonApi();
             $res = $user->add_user($password,$data['username'],'','','');
@@ -246,7 +245,7 @@ class IndexController extends CommonController
             $auth2 = Food_store_auth::find()->where(['auth_level'=>1])->asArray()->all();
             $a['one'] = $auth1;
             $a['two'] = $auth2;
-            $cache->set('cache_data_employee_role_add', $a, 60*60);
+            $cache->set('cache_data_employee_role_add', $a, 0);
         } 
         return $this->render('employee_role_add',['auth1'=>$auth1,'auth2'=>$auth2]);
     }
@@ -905,13 +904,13 @@ class IndexController extends CommonController
         $role_id = Yii::$app->session['employee']['role_id'];
 
         if($role_id > 0){
-             $cat_id = explode(',',Food_store_role::find()->select('cat_id')->where(['id'=>$id])->one());
+            $role = Food_store_role::find()->select('cat_id')->where(['id'=>$role_id])->asArray()->one();
+            $cat_id = explode(',',$role['cat_id']);
         }else{
-            $cat_id_all = Food_cat::find()->select('id')->where(['shop_id'=>$this->mid])->all();
+            $cat_id_all = Food_cat::find()->select('id')->where(['shop_id'=>$this->mid])->asArray()->all();
             $cid_all = $this->arr2_arr1($cat_id_all,'id');
         }
         $data1 = Food_order::find()->where(['status'=>2,'shop_id'=>$this->mid])->andwhere('print_status in(0,1,2)')->asArray()->all();
-        
         foreach($data1 as $v)
         {
           $sql = 'select a.*,b.goods_name,b.cat_id,b.goods_img,b.cook from food_order_goods as a  left join food_goods as b on a.goods_id=b.id where a.order_id='.$v['id'];
@@ -920,16 +919,18 @@ class IndexController extends CommonController
         $data2=[];
         if(Yii::$app->session['cid'] || Yii::$app->session['employee']['role_id'] == 0){
             //店长或经理登录
-          foreach($data1['test'] as $v)
-          {
-              foreach($v  as $k => $v1)
-              {
-                  if(in_array($v1['cat_id'],$cid_all))
-                  {
-                      $data2[]=array('goods_id'=>$v1['goods_id'],'goods_num'=>$v1['goods_num'],'goods_name'=>$v1['goods_name'],'goods_img'=>$v1['goods_img'],'order_id'=>$v1['order_id'],'id'=>$v1['id'],'status'=>$v1['status'],'cook'=>$v1['cook']);
-                  }
-              }
-          }
+            if($data1['test'] == true){
+                foreach($data1['test'] as $v)
+                {
+                    foreach($v  as $k => $v1)
+                    {
+                        if(in_array($v1['cat_id'],$cid_all))
+                        {
+                            $data2[]=array('goods_id'=>$v1['goods_id'],'goods_num'=>$v1['goods_num'],'goods_name'=>$v1['goods_name'],'goods_img'=>$v1['goods_img'],'order_id'=>$v1['order_id'],'id'=>$v1['id'],'status'=>$v1['status'],'cook'=>$v1['cook']);
+                        }
+                    }
+                }
+            }    
         }elseif(Yii::$app->session['employee']['role_id']!=0 && empty(Yii::$app->session['cid'])) {
        
             //员工登陆
