@@ -12,7 +12,7 @@ use yii\helpers\Json;
 use app\web\modules\models\Menu;
 // use app\web\modules\common\LinkPages;
 // use app\web\modules\models\DbManager;
-use common\core\rbac;
+use app\common\core\rbac;
 use yii\web\Controller;
 // use yii\rbac\DbManager;
 // use yii\rbac\DbManager;

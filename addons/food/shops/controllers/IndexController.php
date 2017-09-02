@@ -43,43 +43,31 @@ class IndexController extends CommonController
     	if(Yii::$app->request->isPost){
             $data = Yii::$app->request->post();
     	}
+        $cache = Yii::$app->cache; 
     	$this->layout = 'layout2';
         if (isset(Yii::$app->session['cid']) || Yii::$app->session['employee']['role_id'] == 0) {
-<<<<<<< HEAD
-        	$authInfoA = Food_store_auth::find()->where(['auth_level'=>0,'is_show'=>1])->asArray()->orderBy('id asc')->all();
-        	$authInfoB = Food_store_auth::find()->where(['auth_level'=>1,'is_show'=>1])->asArray()->orderBy('id asc')->all();
-            //$authInfoA = model('store_auth')->where(array('auth_level'=>0,'is_show'=>1))->order('id asc')->select();
-            //$authInfoB = model('store_auth')->where(array('auth_level'=>1,'is_show'=>1))->order('id asc')->select();
-=======
-            $cache = Yii::$app->cache; 
             $authInfoA = $cache->get('cache_data_authInfoA'); 
             $authInfoB = $cache->get('cache_data_authInfoB'); 
             if ($authInfoA === false) {
             	$authInfoA = Food_store_auth::find()->where(['auth_level'=>0,'is_show'=>1])->asArray()->orderBy('id asc')->all();
             	$authInfoB = Food_store_auth::find()->where(['auth_level'=>1,'is_show'=>1])->asArray()->orderBy('id asc')->all();
-                $cache->set('cache_data_authInfoA', $authInfoA, 60*60); 
-                $cache->set('cache_data_authInfoB', $authInfoB, 60*60); 
+                $cache->set('cache_data_authInfoA', $authInfoA, 60*600000); 
+                $cache->set('cache_data_authInfoB', $authInfoB, 60*600000); 
             }
->>>>>>> ef52423952501591227e18258fbcdceed048d7ac
+
         }else{
-           /* $role= model('store_role')->where(array('store_id'=>$this->mid,'id'=>$_SESSION['employee']['role_id']))->find();
-            $authInfoA = model('store_auth')
-                    ->where(array(
-                        'auth_level'=>0,
-                        'is_show'=>1,
-                        'id'=>array('in',$role['role_auth_ids'])))
-                    ->select();
-
-            //var_dump($authInfoA);die
-            $authInfoB = model('store_auth')
-                    ->where(array(
-                        'auth_level'=>1,
-                        'is_show'=>1,
-                        'id'=>array('in',$role['role_auth_ids'])))
-                    ->select();*/
+            $role_id = Yii::$app->session['employee']['role_id'];
+            $authInfoA = $cache->get('cache_data_authInfoA'.$role_id );
+            $authInfoB = $cache->get('cache_data_authInfoB'.$role_id );
+            if($authInfoA == false){
+                $role  = Food_store_role::find()->where(['store_id'=>$this->mid,'id'=>$role_id ])->asArray()->one();
+                $authInfo = [];
+                $authInfoA = Food_store_auth::find()->where(['auth_level'=>0,'is_show'=>1])->andwhere('id in('.$role['role_auth_ids'].')')->asArray()->orderBy('id asc')->all();
+                $authInfoB = Food_store_auth::find()->where(['auth_level'=>1,'is_show'=>1])->andwhere('id in('.$role['role_auth_ids'].')')->asArray()->orderBy('id asc')->all();
+                $cache->set('cache_data_authInfoA'.$role_id, $authInfoA, 60*600000); 
+                $cache->set('cache_data_authInfoB'.$role_id, $authInfoB, 60*600000); 
+            }
         }
-          
-
        	return $this->render('left_menu',['authInfoA'=>$authInfoA,'authInfoB'=>$authInfoB,'action'=>$data['action']]);
     }
     //员工列表
@@ -232,9 +220,16 @@ class IndexController extends CommonController
         if (Yii::$app->request->isPost) {
             $data = Yii::$app->request->post();
             $ids = rtrim($data['all_id'],',');
+            $auths = Food_store_auth::find()->select('auth_a,auth_c')->where('id in('.$ids.')')->asArray()->all();
+            $ac = '';
+            foreach ($auths as  $v) {
+               $ac.=$v['auth_a'].'-'.$v['auth_c'].',';
+            }
+
             $datas['store_id'] = $this->mid;
             $datas['role_name'] = $data['role_name'];
             $datas['role_auth_ids'] = $ids;
+            $datas['role_auth_ac'] =  $ac;
             if (Yii::$app->db->createCommand()->insert('food_store_role',$datas)->execute()) {
                $this->dexit(['error'=>0,'msg'=>'添加成功']);
             }else{
@@ -261,8 +256,16 @@ class IndexController extends CommonController
         if (Yii::$app->request->isPost) {
             $data = Yii::$app->request->post();
             $ids = rtrim($data['all_id'],',');
+
+            $auths = Food_store_auth::find()->select('auth_a,auth_c')->where('id in('.$ids.')')->asArray()->all();
+            $ac = '';
+            foreach ($auths as  $v) {
+               $ac.=$v['auth_a'].'-'.$v['auth_c'].',';
+            }
+
             $datas['role_name'] = $data['role_name'];
             $datas['role_auth_ids'] = $ids;
+             $datas['role_auth_ac'] =  $ac;
             if(Yii::$app->db->createCommand()->update('food_store_role',$datas,'id='.$data['role_id'])->execute()){
                 $this->dexit(['error'=>0,'msg'=>'修改成功']);
             }else{
@@ -1045,9 +1048,18 @@ class IndexController extends CommonController
     //服务员入口
     public function actionDo_entrance_waiter()
     {
+        $this->layout = 'layout3';
 
         $data1 = Food_shop_tables::find()->where(['status'=>0,'store_id'=>$this->mid])->asArray()->all();
         return $this->render('choose_table_wap',['data1'=>$data1,'mid'=>$this->mid]);
+    }
+
+    //预定管理
+    public function actionDo_shop_reserve()
+    {
+
+        return $this->render('shop_reserve');
+
     }
 
 }

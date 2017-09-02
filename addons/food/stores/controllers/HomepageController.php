@@ -510,8 +510,9 @@ class HomepageController extends CommonController
         $session->remove('phone');
         if(!$this->cid)
         {
-            header('Location:?r=plugin/publics/default/super_login');
+            header('Location:?r=plugin/publics/default/index');die;
         }
+        header('Location:?r=plugin/publics/default/index');die;
     }
 
 }

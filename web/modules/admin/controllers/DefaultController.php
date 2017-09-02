@@ -42,7 +42,6 @@ class DefaultController extends Controller
 
     public function actionIndex()
     {
-        echo 1;die;
         $this->layout = "layout1";
         $user_id=Yii::$app->user->identity->getId();
         $user_info = Yii::$app->authManager->getRolesByUser($user_id);
@@ -62,7 +61,7 @@ class DefaultController extends Controller
     {
         $this->layout = "layout1";
         if (!Yii::$app->user->isGuest) {
-            echo 1;
+            //echo 1;
             header('Location:?r=admin/default/index');die;
             //return $this->goHome();
         }
@@ -70,7 +69,7 @@ class DefaultController extends Controller
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             $model->loginLog();
-            echo 1;
+            //echo 1;
             header('Location:?r=admin/default/index');die;
             //return $this->goBack();
         } else {

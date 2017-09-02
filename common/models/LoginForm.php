@@ -1,9 +1,9 @@
 <?php
-namespace common\models;
+namespace app\common\models;
 
 use Yii;
 use yii\base\Model;
-use backend\models\Log;
+use app\web\modules\models\Log;
 /**
  * Login form
  */

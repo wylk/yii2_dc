@@ -23,8 +23,6 @@
     <!-- this page specific styles -->
     <link rel="stylesheet" href="<?php echo FOOD_PATH;?>css/compiled/index.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php echo FOOD_PATH;?>sweetalert/sweetalert.css" type="text/css" media="screen" />
-    <link href="<?php echo FOOD_PATH?>css/reset.css" type="text/css"  rel="stylesheet" />
-    <link href="<?php echo FOOD_PATH?>css/style.css" type="text/css"  rel="stylesheet" />
     <script src="<?php echo FOOD_PATH;?>sweetalert/sweetalert.min.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js">
     </script>
@@ -52,7 +50,7 @@
                     <b class="caret"></b>
                 </a>
             <li class="settings hidden-xs hidden-sm">
-                <a href="?m=plugin&p=public&cn=index&id=food:sit:do_shop_out_login" role="button">
+                <a href="?r=plugin/publics/default/shop_out_login" role="button">
                     <i class="icon-share-alt"></i>
                 </a>
             </li>
@@ -68,11 +66,11 @@
 
 
 <script type="text/javascript">
-	$(function(){
+	
 		var action = "<?= $this->context->action->id ?>";
 		var _csrf = '<?= Yii::$app->request->csrfToken ?>';
 		$('#sidebar-nav').load('?r=plugin/shops/index/left_menu',{action:action,_csrf:_csrf},function(){
 			console.log('loadok');
 		})
-	})
+
 </script>
