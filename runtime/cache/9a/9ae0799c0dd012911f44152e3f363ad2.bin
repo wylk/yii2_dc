@@ -1,0 +1,221 @@
+a:2:{i:0;s:10997:"<!DOCTYPE html>
+<html>
+<head>
+	<title>点餐后台</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content=" " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap -->
+    <link href="./adminStatic/static/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="./adminStatic/static/css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+
+    <!-- libraries -->
+    <link href="./adminStatic/static/css/lib/jquery-ui-1.10.2.custom.css" rel="stylesheet" type="text/css" />
+    <link href="./adminStatic/static/fonts/font-awesome.css" type="text/css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" type="text/css" href="./adminStatic/static/css/compiled/layout.css">
+    <link rel="stylesheet" type="text/css" href="./adminStatic/static/css/compiled/elements.css">
+    <link rel="stylesheet" type="text/css" href="./adminStatic/static/css/compiled/icons.css">
+    <link rel="stylesheet" href="./adminStatic/static/css/compiled/new-user.css" type="text/css" media="screen" />
+    <!-- this page specific styles -->
+    <link rel="stylesheet" href="./adminStatic/static/css/compiled/index.css" type="text/css" media="screen" />
+   
+        <script src="http://code.jquery.com/jquery-latest.js">
+        </script>
+        <script src="./adminStatic/static/js/bootstrap.min.js">
+        </script>
+        <script src="./adminStatic/static/js/theme.js"></script>
+</head>
+      <ul id="dashboard-menu">
+        <li>                
+                <a href="?r=plugin/shops/index/index">
+                    <i class="icon-home"></i>
+                    <span>首页</span>
+                </a>
+        </li>
+                
+            <li>
+                <a class="dropdown-toggle" href="#">
+                    <i class="icon-group"></i>
+                    <span>员工管理</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                
+                <!-- <ul class="submenu"> -->
+                <ul  class="submenu">
+
+                                                          <li><a href="?r=plugin/shops/index/do_employee_list"  >员工列表</a></li>
+                                       
+                                                          <li><a href="?r=plugin/shops/index/do_employee_role"  >角色管理</a></li>
+                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                 
+                </ul>
+               
+            </li>
+
+                    
+            <li>
+                <a class="dropdown-toggle" href="#">
+                    <i class="icon-archive"></i>
+                    <span>商品管理</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                
+                <!-- <ul class="submenu"> -->
+                <ul  class="submenu">
+
+                                                       
+                                                       
+                                                          <li><a href="?r=plugin/shops/index/do_goods_list"  >商品列表</a></li>
+                                       
+                                                          <li><a href="?r=plugin/shops/index/do_goods_cat"  >商品分类</a></li>
+                                       
+                                                          <li><a href="?r=plugin/shops/index/do_goods_spec"  >商品规格</a></li>
+                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                 
+                </ul>
+               
+            </li>
+
+                    
+            <li>
+                <a class="dropdown-toggle" href="#">
+                    <i class="icon-cog"></i>
+                    <span>店内设置</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                
+                <!-- <ul class="submenu"> -->
+                <ul  class="submenu">
+
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                          <li><a href="?r=plugin/shops/index/do_shop_table"  >餐桌管理</a></li>
+                                       
+                                                          <li><a href="?r=plugin/shops/index/do_shop_table_type"  >餐桌类型</a></li>
+                                       
+                                                          <li><a href="?r=plugin/shops/index/do_shop_queue"  >排队管理</a></li>
+                                       
+                                                          <li><a href="?r=plugin/shops/index/do_shop_reserve"  >预订管理</a></li>
+                                       
+                                                       
+                                                       
+                                                          <li><a href="?r=plugin/shops/index/do_shop_table_add"  >添加餐桌</a></li>
+                                       
+                                                       
+                                                       
+                                                       
+                                                          <li><a href="?r=plugin/shops/index/do_hall_qrcode"  >大厅二维码</a></li>
+                                       
+                                                       
+                 
+                </ul>
+               
+            </li>
+
+                    
+            <li>
+                <a class="dropdown-toggle" href="#">
+                    <i class="icon-envelope-alt"></i>
+                    <span>订单中心</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                
+                <!-- <ul class="submenu"> -->
+                <ul  class="submenu">
+
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                          <li><a href="?r=plugin/shops/index/do_order_unpay"  >未付款订单</a></li>
+                                       
+                                                          <li><a href="?r=plugin/shops/index/do_order_paid"  >已付款订单</a></li>
+                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                          <li><a href="?r=plugin/shops/index/do_order_out_food"  >外卖订单</a></li>
+                                       
+                 
+                </ul>
+               
+            </li>
+
+                    
+            <li>
+                <a class="dropdown-toggle" href="#">
+                    <i class="icon-user"></i>
+                    <span>员工入口</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+                
+                <!-- <ul class="submenu"> -->
+                <ul  class="submenu">
+
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                          <li><a href="?r=plugin/shops/index/do_ntrance"  >员工入口管理</a></li>
+                                       
+                                                          <li><a href="?r=plugin/shops/index/do_entrance_cook"  >厨师入口</a></li>
+                                       
+                                                          <li><a href="?r=plugin/shops/index/do_entrance_waiter"  >服务员入口</a></li>
+                                       
+                                                       
+                                                       
+                 
+                </ul>
+               
+            </li>
+
+                    </ul>";i:1;N;}

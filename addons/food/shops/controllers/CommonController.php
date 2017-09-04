@@ -43,7 +43,7 @@ class CommonController extends Controller
             }
 
         }
-        if (empty(Yii::$app->session['employee']) && empty(Yii::$app->session['cid'])) {
+        if (empty(Yii::$app->session['employee']) && empty(Yii::$app->session['cid']) && strpos('index-test',$nowAC) == false) {
             echo   '<script> window.top.location.href = "?r=plugin/publics/default/index";</script>';
         }else{
             if (isset(Yii::$app->session['employee']) && Yii::$app->session['employee']['role_id'] != 0) {

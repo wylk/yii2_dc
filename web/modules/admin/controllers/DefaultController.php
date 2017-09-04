@@ -29,12 +29,18 @@ class DefaultController extends Controller
                         'allow' => true,
                         'roles' => ['@'],
                     ],
+                    [
+                        'actions' => ['del', 'index'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
                 ],
             ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'logout' => ['get'],
+                    //'del' => ['get'],
                 ],
             ],
         ];
@@ -77,5 +83,26 @@ class DefaultController extends Controller
                 'model' => $model,
             ]);
         }
+    }
+
+    public function actionDel()
+    {
+        if(Yii::$app->cache->flush()){
+            $this->dexit(['error'=>0,'msg'=>'清除缓存成功']);
+        }else{
+            $this->dexit(['error'=>0,'msg'=>'清除缓存失败']);
+
+        }
+
+    }
+
+    public function dexit($data = '') 
+    {
+        if (is_array($data)) {
+            echo json_encode($data);
+        } else {
+            echo $data;
+        }
+        exit();
     }
 }

@@ -91,6 +91,7 @@ $this->title = 'Y+';
                         </form>
                     </div>
                     <ul class="nav navbar-top-links navbar-right">
+                    <a href="javascript:;" id="del_cache"><span style="color:red;font-size: 12px" >清除缓存</span></a>
                         <li class="dropdown hidden-xs">
                             <a class="right-sidebar-toggle" aria-expanded="false">
                                 <i class="fa fa-tasks"></i> 主题
@@ -235,3 +236,21 @@ $this->title = 'Y+';
     <script src="adminStatic/js/hplus.min.js?v=4.1.0"></script>
     <script type="text/javascript" src="adminStatic/js/contabs.min.js"></script>
     <script src="adminStatic/js/plugins/pace/pace.min.js"></script>
+    <link rel="stylesheet" href="<?php echo FOOD_PATH;?>sweetalert/sweetalert.css" type="text/css" media="screen" />
+    <script src="<?php echo FOOD_PATH;?>sweetalert/sweetalert.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#del_cache').click(function(){
+                var csrf = '<?= Yii::$app->request->csrfToken ?>';
+                $.post('?r=admin/default/del',{_csrf:csrf},function(re){
+                    if(re.error == 0){
+                        swal('友情提示',re.msg,'success')
+                    }else{
+                        swal('友情提示',re.msg,'error')
+                        
+                    }
+
+                },'json')
+            });
+        });
+    </script>

@@ -27,8 +27,12 @@ class IndexController extends CommonController
 {
     public function actionTest()
     {
-        $data = new Common();
-        $data->index();
+        $cache = Yii::$app->cache;
+        //$url = 'http://yii2.com/index.php?r=plugin/shops/index/left_menu';
+        //$file = file_get_contents($url);
+        //$cache->set('cache_data_left_menu', $file, 60*600000);
+        $authInfo = $cache->get('cache_data_left_menu');
+        echo $authInfo;
     }
 
     public function actionIndex()
@@ -42,7 +46,9 @@ class IndexController extends CommonController
     {
     	if(Yii::$app->request->isPost){
             $data = Yii::$app->request->post();
-    	}
+    	}else{
+            $data = true;
+        }
         $cache = Yii::$app->cache; 
     	$this->layout = 'layout2';
         if (isset(Yii::$app->session['cid']) || Yii::$app->session['employee']['role_id'] == 0) {
