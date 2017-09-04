@@ -207,18 +207,66 @@ class CommonApi
         // 返回数据
         return $return;
     }
-
+    //短信api接口
     public function message($tel,$code)
     {
         $api='https://lepay.51ao.com/pay/api/message.php';
         $data=[
-        'appid'=>'LBer7abu55ivwdz05t',
-        'mch_id'=>'18094259843',
+        'appid'=>$this->appid,
+        'mch_id'=>$this->mch_id,
         'projectName'=>'点餐网',
         'rand_num'=> $code,
         'tel'=>$tel,
         ];
        	$xml = $this->arr_xml($datas,$this->key);
+        $ret=$this->post($api,$xml);
+        return json_decode(json_encode(simplexml_load_string($ret, 'SimpleXMLElement', LIBXML_NOCDATA)), true);
+
+    }
+    //客户微信支付
+    public function paying($fee,$goods_name,$truename,$openid,$trade_no)
+	{
+		$api='https://lepay.51ao.com/pay/api/index.php';
+		//构造参数
+		$data=[
+		'appid'=>$this->appid,
+		'mch_id'=>$this->mch_id,
+		'openid'=> $openid,
+		'goods_name'=>$goods_name,
+		'out_trade_no'=>$trade_no,
+		'total_fee'=>$fee,//单位是分
+		'notify_url'=>'http://dc.51ao.com/api/weixin/weixin_return.php',
+		'tname'=>$truename,
+		'trade_type'=>'weixin',
+		];
+		$xml = $this->arr_xml($data,$this->key);
+		$ret=$this->post($api,$xml);
+		return json_decode(json_encode(simplexml_load_string($ret, 'SimpleXMLElement', LIBXML_NOCDATA)), true);
+
+		}
+
+		//二维码支付
+	public function pay_qrcode($fee,$goods_name,$truename,$trade_no,$paytype)
+    {
+        $api='https://lepay.51ao.com/pay/api/pay_code.php';
+        //构造参数
+        $data=[
+        'appid'=>$this->appid,
+        'mch_id'=>$this->mch_id,
+        'goods_name'=>$goods_name,
+        'out_trade_no'=>$trade_no,
+        'total_fee'=>$fee,//单位是分
+        'notify_url'=>'http://dc.51ao.com/api/weixin/weixin_qrcode.php',
+        'tname'=>$truename,
+        'trade_type'=>$paytype,
+        ];
+        if($paytype == ''){
+            $data['trade_type'] = 'weixin';
+        }else{
+            $data['trade_type'] = 'alipay';
+
+        }
+        $xml = $this->arr_xml($data,$this->key);
         $ret=$this->post($api,$xml);
         return json_decode(json_encode(simplexml_load_string($ret, 'SimpleXMLElement', LIBXML_NOCDATA)), true);
 

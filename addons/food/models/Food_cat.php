@@ -5,6 +5,7 @@ use yii\db\ActiveRecord;
 use Yii;
 class Food_cat extends ActiveRecord
 {
+<<<<<<< HEAD
 
     // public function searchStore($data)
     // {
@@ -23,4 +24,7 @@ class Food_cat extends ActiveRecord
     //     return $this->hasOne(Food_shop_type::className(),['id'=>'type_id'])->asArray();
     // }
 
+=======
+	
+>>>>>>> b2a9c655757ee404bb13b6ccd2270140994b410f
 }

@@ -203,7 +203,7 @@ class DefaultController extends Controller
 
          if (Yii::$app->request->isPost) {
             $data = Yii::$app->request->post();
-            $employee = Food_employee::find()->where(['phone'=>$data['phone']])->one();
+            $employee = Food_employee::find()->where(['phone'=>$data['phone']])->asArray()->one();
             if (empty($employee)) {
                 $this->dexit(array('error'=>1,'msg'=>'登录名不对'));
             }
@@ -224,6 +224,20 @@ class DefaultController extends Controller
         $this->layout = "layout1";
         return $this->render('shop_login');
 
+    }
+    //店铺退出登录
+    public function actionShop_out_login()
+    {
+        $session = \Yii::$app->session;
+        if (Yii::$app->session['cid']) {
+            $session->remove('employee');
+            $session->remove('shop_id');
+                header('Location:index.php?r=plugin/stores/homepage/index');die;
+
+            }else{
+                $session->remove('employee');
+                header('Location:index.php?r=plugin/publics/default/index');die;
+            }
     }
 
     public function dexit($data = '')
