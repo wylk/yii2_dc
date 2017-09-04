@@ -5,12 +5,14 @@ use yii\web\Controller;
 use app\addons\food\models\Food_company;
 use app\addons\food\models\Food_employee;
 use app\addons\food\models\UploadForm2;
+use app\vendor\org\CommonApi;
 use yii\web\UploadedFile;
 /**
  * Default controller for the `publics` module
  */
 class DefaultController extends Controller
 {
+    //public $enableCsrfValidation = false;
     public function init()
     {
         parent::init();
@@ -23,6 +25,7 @@ class DefaultController extends Controller
     //登录入口
     public function actionIndex()
     {
+        echo Yii::$app->request->csrfToken;die;
         $this->layout = "layout1";
         return $this->render('index');
     }
@@ -30,6 +33,7 @@ class DefaultController extends Controller
     public function actionSuper_login()
     {
         if(Yii::$app->request->isPost){
+
             $data = Yii::$app->request->post();
             $data1 = Food_company::find()->where(['phone'=>$data['phone']])->one();
             if($data1){
@@ -162,6 +166,10 @@ class DefaultController extends Controller
         if (Yii::$app->request->isPost) {
             //先插入到数据库
             $post=Yii::$app->request->post();
+            if(Yii::$app->session['code'] != $post['code']){
+                echo "<script>alert('验证码错误');location.href=history.go(-1);</script>";die;
+                    
+            }
             unset($post['_csrf']);
             unset($post['UploadForm2']);
             unset($post['code']);
@@ -238,6 +246,24 @@ class DefaultController extends Controller
                 $session->remove('employee');
                 header('Location:index.php?r=plugin/publics/default/index');die;
             }
+    }
+
+    public function actionMessage()
+    {
+        $tel = Yii::$app->request->get('tel');
+        $rand_num = rand(1111,9999);
+        $user = new CommonApi();
+        $res = $user->message($tel,$rand_num);
+        if ($res['return_code'] == 'SUCCESS') {
+            $session = Yii::$app->session;
+            session_set_cookie_params(3600*24);
+            $session['code'] = $res['rand_num'];
+           $this->dexit(['error'=>0,'msg'=>'发送成功']);
+        }else{
+           $this->dexit(['error'=>0,'msg'=>'发送失败']);
+
+        }
+
     }
 
     public function dexit($data = '')
