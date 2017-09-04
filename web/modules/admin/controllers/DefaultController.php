@@ -42,7 +42,6 @@ class DefaultController extends Controller
 
     public function actionIndex()
     {
-        echo 1;die;
         $this->layout = "layout1";
         $user_id=Yii::$app->user->identity->getId();
         $user_info = Yii::$app->authManager->getRolesByUser($user_id);

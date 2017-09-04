@@ -5,7 +5,7 @@ use yii\db\ActiveRecord;
 use Yii;
 class Food_shop_tables extends ActiveRecord
 {
-<<<<<<< HEAD
+
 
     // public function searchStore($data)
     // {
@@ -24,7 +24,4 @@ class Food_shop_tables extends ActiveRecord
     //     return $this->hasOne(Food_shop_type::className(),['id'=>'type_id'])->asArray();
     // }
 
-=======
-	
->>>>>>> add1
 }

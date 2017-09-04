@@ -14,8 +14,8 @@
 <header>
     <a href="#" class="return"><img src="<?php echo FOOD_PATH;?>img/return.png" /></a>
     <p class="switch">
-    <a href="?m=plugin&p=wap&cn=index&id=food:sit:wap_ordermeal&shop_id=<?php echo $mid; ?>&table_id=<?php echo $table_id; ?>">快速点餐</a>
-    <a href="?m=plugin&p=wap&cn=index&id=food:sit:wap_menuorder&shop_id=<?php echo $mid; ?>&table_id=<?php echo $table_id; ?>" class="selected">菜谱点餐</a></p>
+    <a href="?r=plugin/users/default/wap_ordermeal&shop_id=<?php echo $mid; ?>&table_id=<?php echo $table_id; ?>">快速点餐</a>
+    <a href="?r=plugin/users/default/wap_menuorder&shop_id=<?php echo $mid; ?>&table_id=<?php echo $table_id; ?>" class="selected">菜谱点餐</a></p>
 </header>
 
 
@@ -60,9 +60,9 @@
             <p><?php echo $v1['goods_name']?></p>
             <p class="pr">¥<span class="price"><?php echo $v1['goods_price'];?></span></p>
           </div>
-          <input type="hidden" name="_csrf" value="<?php echo \Yii::$app->request->csrfToken;?>" />
+       <!--    <input type="hidden" name="_csrf" value="<?php echo \Yii::$app->request->csrfToken;?>" /> -->
         <div class="lt-rt">
-          <input type="button" class="minusindex"value="-" data-id="<?php echo $v1['id']?>" sid="<?php echo $v1['shop_id']?>">
+          <input type="button" class="minusindex"value="-" data-id="<?php echo $v1['id']?>" price="<?php echo $v1['goods_price']?>">
           <input type="text" class="result" value="0">
           <input type="button" class="add" value="+" data-id="<?php echo $v1['id']?>" price="<?php echo $v1['goods_price']?>">
         </div>
@@ -120,14 +120,16 @@ $(function(){
     // console.log(goods_price);
     // return false;
     var shop_id="<?php echo $mid?>";
+    var table_id="<?php echo $table_id;?>"
     var _csrf="<?php echo \Yii::$app->request->csrfToken?>";
     var postData={goods_id:goods_id};
     postData.goods_price=goods_price;
     postData.num=num1;
     postData.csrf=_csrf;
     postData.shop_id=shop_id;
+    // postData.table_id=table_id;
     console.log(postData);
-   $.post('?r=plugin/users/default/cart',postData,function(re){
+   $.get('?r=plugin/users/default/cart',postData,function(re){
             if(re.error==0)
             {
                 console.log(re.msg);
@@ -142,10 +144,35 @@ $(function(){
     $(".minusindex").click(function(){
     var t=$(this).parent().find('input[class*=result]');
     t.val(parseInt(t.val())-1);
+    var num1=t.val();
     if(parseInt(t.val())<0){
     t.val(0);
     }
     setTotal();
+    var goods_id=$(this).data('id');
+    // console.log(goods_id);
+    // return false;
+    var goods_price=$(this).attr('price');
+    var shop_id="<?php echo $mid?>";
+    var table_id="<?php echo $table_id;?>"
+    var _csrf="<?php echo \Yii::$app->request->csrfToken?>";
+    var postData={goods_id:goods_id};
+    postData.goods_price=goods_price;
+    postData.num=num1;
+    postData.csrf=_csrf;
+    postData.shop_id=shop_id;
+    console.log(postData);
+    // return false;
+   $.get('?r=plugin/users/default/cart',postData,function(re){
+            if(re.error==0)
+            {
+                console.log(re.msg);
+                // window.location.href='?m=plugin&p=wap&cn=index&id=food:sit:cart&table_id=1&shop_id=7';
+            }else
+            {
+                console.log(re.msg);
+            }
+        },'json');
     })
 
     function setTotal(){

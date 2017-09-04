@@ -70,6 +70,8 @@ class CommonController extends  Controller
         {
             $this->table_id=$session->get('table_id');
         }
+        $view = Yii::$app->view;
+        $view->params['mid'] = $this->mid;
     }
     public function dexit($data = '')
     {
@@ -143,5 +145,71 @@ class CommonController extends  Controller
                 }
             }
         }
+    }
+    public function do_queue_buyer_time($bl)
+    {
+        $queues=Food_queue_add_lin::find()->where(['status'=>1])->asArray()->all();
+        $tables=Food_shop_tables::find()->where(['status'=>0])->asArray()->all();
+        $aa = [];
+        if ($tables) {
+            foreach ($queues as $key => $vv) {
+                $sm = 100000000000;
+                $a = [];
+
+                foreach ($tables as $k=> $v) {
+                    if ($v['store_id'] == $vv['store_id']) {
+                        if ($v['user_count'] >= $vv['limit_num'] ) {
+                            $n = abs($v['user_count']-$vv['limit_num']);
+                            if ($sm > $n && $n < $bl) {
+                                $sm = $n;
+                                $a['table'] = $v;
+                                $a['queue'] = $vv;
+                            }
+                        }
+                    }
+                }
+                if (isset($a)) {
+                    $aa[]=$a;
+                }
+
+            }
+
+        }
+
+        foreach ($aa as $kk => $vv) {
+            $table_id = $vv['table']['id'];
+            $queue_id = $vv['queue']['id'];
+            $buyer=food_queue_buyer::find()->where(['status'=>1,'queue_id'=>$queue_id])->asArray()->one();
+            //echo $table_id;
+            $data['status'] = 2;
+            $data['table_id'] = $table_id;
+            if (Yii::$app->db->createCommand()->update('food_queue_buyer',$data,'id='.$buyer['id'])->execute()) {
+                Yii::$app->db->createCommand()->update('food_shop_tables',['status'=>1],'id='.$table_id)->execute();
+            }
+
+
+        }
+
+    }
+    public function do_good_stock($orderinfo)
+    {
+        $order_good=Food_order_goods::find()->where(['order_id'=>$orderinfo['id']])->asArray()->all();
+        $goods_id = '';
+        foreach ($order_good as $key => $v) {
+           $goods_id .= $v['goods_id'].',';
+        }
+        $goods_id = rtrim($goods_id,',');
+        $goods=Food_goods::find()->where(['id'=>array('in',$goods_id)])->asArray()->all();
+        $today_time = strtotime(date(Ymd));
+        foreach ($goods as $key => $vv) {
+            $good=Food_goods::find()->where(['id'=>$vv['id']])->asArray()->one();
+            if($today_time > $good['goods_today_time']){
+                Yii::$app->db->createCommand()->update('food_goods',array('goods_today_stock'=>$good['goods_per_stock'],'goods_today_time'=>time()),'id='.$good['id'])->execute();
+                $good=Food_goods::find()->where(['id'=>$vv['id']])->asArray()->one();
+            }
+            Yii::$app->db->createCommand()->update('food_goods',array('goods_today_stock'=>($good['goods_today_stock']-1)),'id='.$vv['id'])->execute();
+        }
+
+        return true;
     }
 }

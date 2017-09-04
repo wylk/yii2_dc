@@ -22,16 +22,20 @@ $(function () {
 		var gid=$(this).data('id');
 		// alert(gid);
     var shop_id=$(this).attr('sid');
+    alert(shop_id);
+    return false;
     // alert(shop_id);
     console.log(shop_id);
     // return false;
+    // var csrf="<?php echo \Yii::$app->request->csrfToken;?>";
 		var postData={goods_id:gid};
 		postData.goods_price=danjia;
 		postData.num=num;
     postData.shop_id=shop_id;
+    // postData.csrf=csrf;
 		console.log(postData);
 		// return false;
-		$.get("?m=plugin&p=wap&cn=index&id=food:sit:cart",postData,function(re){
+		$.get("?r=plugin/users/defualt/cart",postData,function(re){
 			if(re.error==0)
 			{
 				console.log(re.msg);
@@ -71,7 +75,7 @@ $(function () {
 		postData.num=num;
     postData.shop_id=shop_id;
 		console.log(postData);
-		$.get('?m=plugin&p=wap&cn=index&id=food:sit:cart',postData,function(re){
+		$.get('?r=plugin/users/defualt/cart',postData,function(re){
 			if(re.error==0)
 			{
 				console.log(re.msg);
@@ -165,8 +169,10 @@ $(document).ready(function(){
     $('.submit').on('click',function(){
        var gid=that.parents('.shop-arithmetic').find("a").data('id');
        var postData={goods_id:gid};
+       postData.carf=csrf;
        console.log(postData);
-       $.post('?m=plugin&p=wap&cn=index&id=food:sit:delete_cart',postData,function(re){
+       // return false;
+       $.get('?r=plugin/users/default/delete_cart',postData,function(re){
         if(re.error==0)
         {
             alert(re.msg);
@@ -222,9 +228,10 @@ $(document).ready(function(){
         var postData={goods_id:goods_id};
         postData.goods_price=goods_price;
         postData.num=num;
+        postData.csrf=csrf;
         console.log(postData);
           // return false;
-        $.get('?m=plugin&p=wap&cn=index&id=food:sit:cart',postData,function(re){
+        $.get('?r=plugin/users/default/cart',postData,function(re){
             if(re.error==0)
             {
                 console.log(re.msg);
@@ -251,13 +258,14 @@ $(document).ready(function(){
         // console.log(goods_id);
         var goods_price=$(this).attr('price');
         // console.log(goods_price);
+
         var postData={goods_id:goods_id};
         postData.goods_price=goods_price;
         postData.num=num;
+        postData.csrf=csrf;
         console.log(postData);
         // return false;
-         // return false;
-        $.get('?m=plugin&p=wap&cn=index&id=food:sit:cart',postData,function(re){
+        $.get('?r=plugin/users/default/cart',postData,function(re){
             if(re.error==0)
             {
                 console.log(re.msg);
@@ -295,13 +303,15 @@ $(document).ready(function(){
                 data.cat_id = ids;
                 data.total=AllTotal;
                 data.goods_num=allnum;
-
-            $.post('?m=plugin&p=wap&cn=index&id=food:sit:add_order_goods',data,function(re){
+                data.csrf=csrf;
+                console.log(data);
+                // return false;
+            $.get('?r=plugin/users/default/add_order_goods',data,function(re){
                 if(re.error==0)
                 {
                     console.log(re.msg);
                     // alert(re.msg);
-                  window.location.href='?m=plugin&p=wap&cn=index&id=food:sit:confirmPay&order_id='+re.msg;
+                  window.location.href='?r=plugin/users/default/confirmpay&order_id='+re.msg;
                 }else
                 {
                     console.log(re.msg);
@@ -467,7 +477,7 @@ var athat;
         var aid=athat.parent().find("span").text();
         var postdata={aid:aid};
         console.log(postdata);
-        $.post('?m=plugin&p=wap&cn=index&id=food:sit:del_address',postdata,function(re){
+        $.post('?r=plugin/users/default/del_address',postdata,function(re){
             if(re.error==0)
             {
                 alert(re.msg);
@@ -545,6 +555,7 @@ function chenkObj() {
     var city=$('#city').val();
     var town=$('#town').val();
     var aid=$("input[name='aid']").val();
+    // var aid=$("input[name='aid']").val();
     // var detail=$("input[name='detail']").val();
     if(name == ""){
         alert("请输入收货人姓名！");
@@ -589,35 +600,35 @@ function chenkObj() {
     postData.city = city;
     postData.town = town
     postData.detail=detailed;
-    postData.aid=aid;
-    console.log(postData);
-
-
+    // postData.aid=aid;
+    postData._csrf=csrf;
+    postData.id=aid;
+   console.log(postData);
 var  filename=location.href;
       filename=filename.substr(filename.lastIndexOf('/')+1);
-      //alert(filename);  return false;
 if(filename.indexOf("edit") != -1){
-    $.post('?m=plugin&p=wap&cn=index&id=food:sit:edit_address',postData,function(re){
+    $.post('?r=plugin/users/default/edit_address',postData,function(re){
         if(re.error==0)
         {
             alert(re.msg);
-            window.location.href='?m=plugin&p=wap&cn=myself&id=food:sit:address_list';
+            window.location.href='?r=plugin/users/default/address_list';
         }else
         {
             alert(re.msg);
-            window.location.href='?m=plugin&p=wap&cn=myself&id=food:sit:address_list';
+            window.location.href='?r=plugin/users/default/address_list';
         }
     },'json');
   }else{
 
-    $.post('?m=plugin&p=wap&cn=index&id=food:sit:add_address',postData,function(re){
+    $.post('?r=plugin/users/default/add_address',postData,function(re){
         if(re.error==0)
         {
             alert(re.msg);
-            window.location.href="?m=plugin&p=wap&cn=myself&id=food:sit:address_list";
+            window.location.href="?r=plugin/users/default/address_list";
         }else
         {
-            alert(re.msg);
+            // alert(re.msg);
+            console.log(re.msg);
         }
     },'json');
   }

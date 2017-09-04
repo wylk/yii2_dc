@@ -1,6 +1,6 @@
 <?php
 
-namespace common\core\rbac;
+namespace app\common\core\rbac;
 
 
 /**

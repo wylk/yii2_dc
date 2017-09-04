@@ -45,22 +45,21 @@ class IndexController extends CommonController
     	}
     	$this->layout = 'layout2';
         if (isset(Yii::$app->session['cid']) || Yii::$app->session['employee']['role_id'] == 0) {
-<<<<<<< HEAD
+
         	$authInfoA = Food_store_auth::find()->where(['auth_level'=>0,'is_show'=>1])->asArray()->orderBy('id asc')->all();
         	$authInfoB = Food_store_auth::find()->where(['auth_level'=>1,'is_show'=>1])->asArray()->orderBy('id asc')->all();
             //$authInfoA = model('store_auth')->where(array('auth_level'=>0,'is_show'=>1))->order('id asc')->select();
             //$authInfoB = model('store_auth')->where(array('auth_level'=>1,'is_show'=>1))->order('id asc')->select();
-=======
-            $cache = Yii::$app->cache; 
-            $authInfoA = $cache->get('cache_data_authInfoA'); 
-            $authInfoB = $cache->get('cache_data_authInfoB'); 
+            $cache = Yii::$app->cache;
+            $authInfoA = $cache->get('cache_data_authInfoA');
+            $authInfoB = $cache->get('cache_data_authInfoB');
             if ($authInfoA === false) {
             	$authInfoA = Food_store_auth::find()->where(['auth_level'=>0,'is_show'=>1])->asArray()->orderBy('id asc')->all();
             	$authInfoB = Food_store_auth::find()->where(['auth_level'=>1,'is_show'=>1])->asArray()->orderBy('id asc')->all();
-                $cache->set('cache_data_authInfoA', $authInfoA, 60*60); 
-                $cache->set('cache_data_authInfoB', $authInfoB, 60*60); 
+                $cache->set('cache_data_authInfoA', $authInfoA, 60*60);
+                $cache->set('cache_data_authInfoB', $authInfoB, 60*60);
             }
->>>>>>> ef52423952501591227e18258fbcdceed048d7ac
+
         }else{
            /* $role= model('store_role')->where(array('store_id'=>$this->mid,'id'=>$_SESSION['employee']['role_id']))->find();
             $authInfoA = model('store_auth')
@@ -78,7 +77,7 @@ class IndexController extends CommonController
                         'id'=>array('in',$role['role_auth_ids'])))
                     ->select();*/
         }
-          
+
 
        	return $this->render('left_menu',['authInfoA'=>$authInfoA,'authInfoB'=>$authInfoB,'action'=>$data['action']]);
     }
@@ -191,7 +190,7 @@ class IndexController extends CommonController
             }else{
               $data['password'] = md5($data['password']);
             }
-            
+
             if (Yii::$app->db->createCommand()->update('food_employee',$data,'id='.$id)->execute()) {
                $this->dexit(array('error'=>0,'msg'=>'修改成功'));
             }else{
@@ -238,21 +237,21 @@ class IndexController extends CommonController
             if (Yii::$app->db->createCommand()->insert('food_store_role',$datas)->execute()) {
                $this->dexit(['error'=>0,'msg'=>'添加成功']);
             }else{
-               $this->dexit(['error'=>1,'msg'=>'添加失败']);  
+               $this->dexit(['error'=>1,'msg'=>'添加失败']);
             }
         }
-        $cache = Yii::$app->cache; 
+        $cache = Yii::$app->cache;
         $data = $cache->get('cache_data_employee_role_add');
-        $auth1 = $data['one']; 
-        $auth2 = $data['two']; 
+        $auth1 = $data['one'];
+        $auth2 = $data['two'];
         if ($data === false) {
-            $a = array();   
+            $a = array();
             $auth1 = Food_store_auth::find()->where(['auth_level'=>0])->asArray()->all();
             $auth2 = Food_store_auth::find()->where(['auth_level'=>1])->asArray()->all();
             $a['one'] = $auth1;
             $a['two'] = $auth2;
             $cache->set('cache_data_employee_role_add', $a, 60*60);
-        } 
+        }
         return $this->render('employee_role_add',['auth1'=>$auth1,'auth2'=>$auth2]);
     }
     //修改角色
@@ -282,21 +281,21 @@ class IndexController extends CommonController
 
     //商品列表
     public function actionDo_goods_list()
-    { 
+    {
         $session = Yii::$app->session;
         session_set_cookie_params(3600*24);
         if(Yii::$app->request->isPost){
             $search = Yii::$app->request->post()['goods_name'];
             if($search != ''){
-                $where = ['goods_name'=>$search]; 
+                $where = ['goods_name'=>$search];
                 $datase = $search;
                 $session['goods_name'] = $where;
             }else{
-                $where = ''; 
+                $where = '';
                 $datase = '全部';
                 $session['goods_name'] = '';
             }
-            
+
         }else{
             $where = '';
             $datase = '全部';
@@ -377,9 +376,9 @@ class IndexController extends CommonController
             $id = $data['cid'];
             $goods = Food_goods::find()->where(['id'=>$id])->asArray()->one();
             unset($data['cid']);
-            if (is_readable($goods['goods_img']) == true) { 
+            if (is_readable($goods['goods_img']) == true) {
                 unlink($goods['goods_img']);
-            } 
+            }
             $model->imageFile = UploadedFile::getInstance($model, 'imageFile');
             if($model->goodsUpload($this->mid,'shop_goods')){
                 $goods_img = $model->file_path;
@@ -471,7 +470,7 @@ class IndexController extends CommonController
         $datas = Food_spec::find()->where(['shop_id'=>$this->mid]);
         $pages = new Pagination(['totalCount' => $datas->count(),'pageSize' => '10']);
         $data = $datas->offset($pages->offset)->asArray()->limit($pages->limit)->all();
-       
+
         $data2['spec_name'] = '全部';
         return $this->render('goods_spec',['data'=>$data,'data2'=>$data2,'pages'=>$pages]);
     }
@@ -569,9 +568,9 @@ class IndexController extends CommonController
         $table = Food_shop_tables::findOne($data['table_id']);
         $table->status = $data['status'];
         if ($table->save()) {
-            $this->dexit(['error'=>0,'msg'=>'修改成功']);   
+            $this->dexit(['error'=>0,'msg'=>'修改成功']);
         }else{
-            $this->dexit(['error'=>1,'msg'=>'修改失败']); 
+            $this->dexit(['error'=>1,'msg'=>'修改失败']);
         }
     }
     //一键清台
@@ -579,11 +578,11 @@ class IndexController extends CommonController
     {
         $data = Yii::$app->request->get('ids');
         if($data == 'all'){
-            $count = Food_shop_tables::updateAll(['status'=>0],'store_id=:st',array(':st'=>$this->mid)); 
+            $count = Food_shop_tables::updateAll(['status'=>0],'store_id=:st',array(':st'=>$this->mid));
             if($count){
                 $this->dexit(['error'=>0,'msg'=>'清台成功']);
             }else{
-                $this->dexit(['error'=>1,'msg'=>'清台失败']); 
+                $this->dexit(['error'=>1,'msg'=>'清台失败']);
             }
         }
 
@@ -620,7 +619,7 @@ class IndexController extends CommonController
             if(Yii::$app->db->createCommand()->insert('food_shop_tables',$data)->execute()){
                 $this->dexit(['error'=>0,'msg'=>'添加成功']);
             }else{
-                $this->dexit(['error'=>1,'msg'=>'添加失败']); 
+                $this->dexit(['error'=>1,'msg'=>'添加失败']);
             }
         }
         $datas = Food_shop_tablezones::find()->select('id,title')->where(['status'=>1,'store_id'=>$this->mid])->asArray()->orderBy('displayorder asc')->all();
@@ -646,7 +645,7 @@ class IndexController extends CommonController
             unset($data['_csrf'],$data['table_id']);
             if(Yii::$app->db->createCommand()->update('food_shop_tables',$data,'id='.$id)->execute()){
                 $this->dexit(['error'=>0,'msg'=>'修改成功']);
-            }else{  
+            }else{
                 $this->dexit(['error'=>1,'msg'=>'修改失败']);
             }
         }
@@ -714,7 +713,7 @@ class IndexController extends CommonController
             unset($data['_csrf']);
             if(Yii::$app->db->createCommand()->insert('food_shop_tablezones',$data)->execute()){
                 $this->dexit(['error'=>0,'msg'=>'添加成功']);
-            }else{    
+            }else{
                 $this->dexit(['error'=>1,'msg'=>'添加失败']);
             }
         }
@@ -733,7 +732,7 @@ class IndexController extends CommonController
             }else{
                 $this->dexit(['error'=>1,'msg'=>'修改失败']);
             }
-                           
+
         }
         $id = Yii::$app->request->get('type_id');
         $datas = Food_shop_tablezones::findOne($id);
@@ -815,7 +814,7 @@ class IndexController extends CommonController
         $id = Yii::$app->request->get('del_id');
         if (Food_queue_add_lin::findOne($id)->delete()) {
             $this->dexit(['error'=>0,'msg'=>'删除成功']);
-        }else{ 
+        }else{
             $this->dexit(['error'=>1,'msg'=>'删除失败']);
         }
     }
@@ -908,7 +907,7 @@ class IndexController extends CommonController
             $cid_all = $this->arr2_arr1($cat_id_all,'id');
         }
         $data1 = Food_order::find()->where(['status'=>2,'shop_id'=>$this->mid])->andwhere('print_status in(0,1,2)')->asArray()->all();
-        
+
         foreach($data1 as $v)
         {
           $sql = 'select a.*,b.goods_name,b.cat_id,b.goods_img,b.cook from food_order_goods as a  left join food_goods as b on a.goods_id=b.id where a.order_id='.$v['id'];
@@ -928,7 +927,7 @@ class IndexController extends CommonController
               }
           }
         }elseif(Yii::$app->session['employee']['role_id']!=0 && empty(Yii::$app->session['cid'])) {
-       
+
             //员工登陆
           foreach($data1['test'] as $v)
           {
@@ -1008,7 +1007,7 @@ class IndexController extends CommonController
                 $this->dexit(array('error'=>0,'msg'=>'接单成功'));
             }else {
                 $this->dexit(array('error'=>1,'msg'=>'接单失败，请稍后再试'));
-            }  
+            }
         }
     }
 
@@ -1018,7 +1017,7 @@ class IndexController extends CommonController
         if (Yii::$app->request->isPost) {
             $data = $id = Yii::$app->request->post();
             $data1 = Yii::$app->db->createCommand()->update('food_order_goods',['status'=>2],'id='.$data['eid'])->execute();
-            $data2 = Food_order::find()->where(['id'=>$data['order_id']])->one();        
+            $data2 = Food_order::find()->where(['id'=>$data['order_id']])->one();
             //订单表状态改为已接单
             if($data1){
                 if($data2['goods_num']==1){
@@ -1037,7 +1036,7 @@ class IndexController extends CommonController
                 $this->dexit(array('error'=>0,'msg'=>'接单成功'));
             }else {
                 $this->dexit(array('error'=>1,'msg'=>'接单失败，请稍后再试'));
-            }  
+            }
         }
 
     }

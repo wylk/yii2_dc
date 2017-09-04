@@ -5,6 +5,9 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>点餐系统购物车</title>
+<script>
+     var csrf="<?php echo \Yii::$app->request->csrfToken;?>";
+</script>
 </head>
 <body>
 <div class="main">
@@ -56,7 +59,7 @@
 
             <?php endforeach;}else{?>
                 <div style="height: 100px; line-height: 100px; text-align: center;">
-                没有点餐呢，<a href="index.php?m=plugin&p=wap&cn=index&id=food:sit:test" class="nobill">赶紧点餐吧</a>
+                没有点餐呢，<a href="index.php?r=plugin/users/default/wap_menuorder" class="nobill">赶紧点餐吧</a>
                 </div>
             <?php };?>
         </ul>
