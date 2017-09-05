@@ -34,7 +34,7 @@
 </div>
 <!--头部结束-->
 <div class="addrmain">
-<form name="shareaddr" action="" onsubmit="" method="post">
+<!-- <form name="shareaddr" action="" onsubmit="" method="post"> -->
 <ul class="addrul">
     <li><span>手机号:</span><input type = "text" name="tel"></li>
     <li><span>用餐人数: </span><input type = "text" name="buyer_num" ></li>
@@ -42,7 +42,7 @@
         <a class="shopOther" style=" font-size: 1.5rem;" type="submit" id="add">提交</a>
     </div>
 </ul>
-</form>
+<!-- </form> -->
 </div>
 
 </body>
@@ -53,6 +53,7 @@ $(function(){
     $('#add').click(function(){
         var tel = $("input[name='tel']").val();
         var buyer_num= $("input[name='buyer_num']").val();
+        var csrf="<?php echo \Yii::$app->request->csrfToken;?>";
         if (!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(tel))) {
             alert('手机号码格式不对');return false;
         }
@@ -62,18 +63,19 @@ $(function(){
         var data ={}
         data.tel = tel;
         data.buyer_num = buyer_num;
+        data._csrf=csrf;
         // console.log('ok');
         console.log(data);
-        $.post("?m=plugin&p=wap&cn=index&id=food:sit:do_queue_buyer",data,function(re){
+        $.post("?r=plugin/users/default/do_queue_buyer",data,function(re){
             console.log(re);
             if (re.error == 0) {
                 alert(re.msg);
                 console.log(re.msg);
                 setTimeout(function(){
-                    window.location.href='?m=plugin&p=wap&cn=index&id=food:sit:do_queue_buyer_show'
+                    window.location.href='?r=plugin/users/default/do_queue_buyer_show'
                 },1000);
             }else{
-                alert(re.msg);
+                // alert(re.msg);
                 console.log(re.msg);
             }
         },'json');

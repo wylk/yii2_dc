@@ -183,7 +183,7 @@ a, a.link:hover{color:#666;}
         $('#weixinPay').click(function(){
              var address="<?php echo $return1['id']?>";
              var not_shop="<?php echo $_SESSION['not_shop'];?>";
-             var eid="<?php echo isset($_SESSION['employee']['id'])?$$_SESSION['employee']['id']:0?>"
+             var eid="<?php echo isset($eid)?$eid:0?>"
             if(address=='' && not_shop && eid=='')
             {
                 alert('你还没有添加收货地址，请添加');
@@ -275,7 +275,7 @@ a, a.link:hover{color:#666;}
        $('#aliPay').click(function(){
              var address="<?php echo $return1['id']?>";
              var not_shop="<?php echo $_SESSION['not_shop'];?>";
-             var eid="<?php echo isset($_SESSION['employee']['id'])?$$_SESSION['employee']['id']:0?>"
+             var eid="<?php echo isset($eid)?$eid:0?>"
             if(address=='' && not_shop && eid=='')
             {
                 alert('你还没有添加收货地址，请添加');

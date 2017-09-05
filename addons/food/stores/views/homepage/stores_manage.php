@@ -64,11 +64,8 @@
           <a href="<?php echo yii\helpers\Url::to(['homepage/shop_edit','bid'=>$v['id']])?>" class="btn btn-success" onclick="if(confirm('是否确认修改？')==false)return false;">修改</a>
           <a href="<?php echo yii\helpers\Url::to(['homepage/shop_del','bid'=>$v['id']])?>" class="btn btn-danger" onclick="if(confirm('是否确认删除？')==false)return false;">删除</a>
         </td>
-<<<<<<< HEAD
+
         <td><a href="r=plugin/shops/index/index&store_id=<?php echo $v['id']?>" class="btn btn-success">进入店铺</a></td>
-=======
-        <td><a href="?r=plugin/shops/index/index&store_id=<?php echo $v['id']?>" class="btn btn-success">进入店铺</a></td>
->>>>>>> b2a9c655757ee404bb13b6ccd2270140994b410f
 
     </tr>
     <?php endforeach;}else{?>暂无数据<?php };?>

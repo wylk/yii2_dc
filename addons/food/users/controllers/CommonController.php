@@ -3,12 +3,13 @@ namespace app\addons\food\users\controllers;
 use yii\web\Controller;
 use Yii;
 use app\vendor\org\CommonApi;
+use app\addons\food\models\Food_employee;
 class CommonController extends  Controller
 {
     public $layout = false;
     public $cid;
     public $mid;
-    public $uid=19;
+    public $uid;
     public $table_id;
     public $eid;
     public function init()
@@ -29,10 +30,12 @@ class CommonController extends  Controller
         }
         if(isset($data['shop_id']))
         {
+            $tamp = $session['employee']['id'];
             $session['employee']=[
             'shop_id'=>$data['shop_id'],
-
+            'id'=>$tamp,
             ];
+
             $this->mid=$session['employee']['shop_id'];
         }else
         {
@@ -40,6 +43,7 @@ class CommonController extends  Controller
         }
         if(isset($data['eid']))
         {
+
             $session['employee']=[
             'id'=>$data['eid'],
 
@@ -48,9 +52,12 @@ class CommonController extends  Controller
             $session->set('uid',$employee['uid']);
             $this->uid=$session->get('uid');
             $this->eid=$session['employee']['id'];
+            // echo $session['employee']['id'];
+            // die;
+
         }else
         {
-            //员工入口
+          //员工入口
             if($session->get('uid') && $session['employee']['id'])
             {
                 $this->uid = $session->get('uid');

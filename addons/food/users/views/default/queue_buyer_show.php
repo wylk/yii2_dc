@@ -62,7 +62,8 @@
   function queue()
   {
     $.ajax({
-          url: "http://dc.51ao.com/?m=plugin&p=wap&cn=index&id=food:sit:do_queue_buyer_times",
+        // http://dc.51ao.com/?m=plugin&p=wap&cn=index&id=food:sit:do_queue_buyer_times
+          url: "?plugin/users/default/do_queue_buyer_times",
           type: "GET",
           dataType: "json",
 

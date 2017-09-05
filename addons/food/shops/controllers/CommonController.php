@@ -27,10 +27,10 @@ class CommonController extends Controller
             if (Yii::$app->session['shop_id']) {
                 $this->mid = Yii::$app->session['shop_id'];
             }
-            
+
         }
 
-        list($sss1,$dssd,$a,$c) = explode('/',Yii::$app->request->get('r')); 
+        list($sss1,$dssd,$a,$c) = explode('/',Yii::$app->request->get('r'));
         $nowAC = $a.'-'.$c;
         $allAC = "index-index,index-left_menu,index-test11";
 
@@ -38,7 +38,7 @@ class CommonController extends Controller
             $cid = Yii::$app->session['cid'];
             $shops = Food_shop::find()->where(['company_id'=>$cid,'id'=>$this->mid])->asArray()->one();
             if($shops == false && strpos($allAC,$nowAC) == false){
-          
+
                 echo "<script>alert('非法访问！');window.history.go(-1);</script>";die;
             }
 
@@ -59,7 +59,7 @@ class CommonController extends Controller
         //dump(Yii::$app->session['cid']);
         $this->layout = 'layout1';
     }
-    public function dexit($data = '') 
+    public function dexit($data = '')
     {
         if (is_array($data)) {
             echo json_encode($data);
@@ -78,7 +78,7 @@ class CommonController extends Controller
         return $arrs;
     }
 
-    public function clear_html($array) 
+    public function clear_html($array)
     {
         if (!is_array($array))
             return trim(htmlspecialchars($array, ENT_QUOTES));

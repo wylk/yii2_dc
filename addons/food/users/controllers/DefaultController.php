@@ -16,6 +16,7 @@ use app\addons\food\models\Food_order;
 use app\addons\food\models\Food_user_address;
 use app\addons\food\models\Food_queue_buyer;
 use app\addons\food\models\Test;
+use app\addons\food\models\Food_queue_add_lin;
 /**
  * Default controller for the `users` module
  $user = new CommonApi($apiarr);
@@ -124,10 +125,10 @@ class DefaultController extends CommonController
         // if ($this->is_weixin()) {
         //     $this->userStatus();
         // }
-        $return=Yii::$app->request->get();
         if(Yii::$app->request->isPost)
         {
             $data=Yii::$app->request->post();
+            // $this->dexit(['error'=>1,'msg'=> $data]);
             $status=Food_queue_buyer::find()->where(['u_id'=>$this->uid,'status'=>1,'store_id'=>$this->mid])->asArray()->one();
             if($status)
             {
@@ -155,6 +156,10 @@ class DefaultController extends CommonController
             }else{
                 $data['buyer_id'] = 10001;
             }
+            unset($data['_csrf']);
+            $data['store_id'] = $this->mid;
+            $data['u_id'] = $this->uid;
+            // $this->dexit(array('error'=>1,'msg'=>));
             if(Yii::$app->db->createCommand()->insert('food_queue_buyer',$data)->execute())
             {
                 $this->dexit(array('error'=>0,'msg'=>'你已经排号成功。。'));
@@ -163,14 +168,25 @@ class DefaultController extends CommonController
                 $this->dexit(array('error'=>1,'msg'=>'你排号失败。。'));
             }
         }
+        $return=Yii::$app->request->get();
         return $this->render('queue_buyer');
     }
     public function actionDo_queue_buyer_show()
     {
         //显示排队的位置
         $buyer=Food_queue_buyer::find()->where(['u_id'=>$this->uid])->asArray()->one();
+        // var_dump($buyers);
+        // die;
         $tables=Food_shop_tables::findOne($buyer['table_id']);
-        $shop_tables=$tables->title;
+        // var_dump($tables);
+        // die;
+        if(isset($tables))
+        {
+            $shop_tables=$tables->title;
+        }else
+        {
+            $shop_tables='';
+        }
         $queue=Food_queue_add_lin::find()->where(['id'=>$buyer['queue_id']])->asArray()->one();
         $buyers=Food_queue_buyer::find()->where(['queue_id'=>$buyer['queue_id'],'status'=>1])->orderBy('add_time asc')->limit(0,$queue['notify_number'])->asArray()->all();
         $num=Food_queue_buyer::find()->where(array('add_time'=>array('lt',$buyer['add_time'])))->asArray()->count();
@@ -266,7 +282,7 @@ class DefaultController extends CommonController
         $data1=Yii::$app->db->createCommand('select a.*,b.goods_img,b.goods_name from food_order_goods as a left join food_goods as b on a.goods_id=b.id where a.order_id='.$data['order_id'])->queryAll();
         $data2=Food_order::find()->where('id=:oid',[':oid'=>$data['order_id']])->asArray()->one();
         $uid=$this->uid;
-        // $session=Yii::$app->session;
+        $session=Yii::$app->session;
         // $session->set('not_shop',false);
         if($session->get('not_shop'))
         {
@@ -482,6 +498,15 @@ class DefaultController extends CommonController
         if(!$this->eid)
         {
             $session['employee']=[];
+        }else
+        {
+            // echo $this->mid;
+            // echo $this->eid;
+            // echo $this->uid;
+            // die;
+            // echo $session['employee']['id'];
+            // echo $session['employee']['shop_id'];
+            // die;
         }
         if($this->is_weixin())
         {
