@@ -18,10 +18,12 @@ class CommonController extends  Controller
         $this->shop_name=$session->get('shop_name');
         $view = Yii::$app->view;
         $view->params['phone'] = $this->phone;
-        if(!$this->cid)
+
+        if($this->cid == false)
         {
-            header('Location:?r=plugin/publics/default/super_login');
+            header('Location:?r=plugin/publics/default/super_login');die;
         }
+       
     }
     public function dexit($data = '')
     {

@@ -218,7 +218,7 @@ class CommonApi
         'rand_num'=> $code,
         'tel'=>$tel,
         ];
-       	$xml = $this->arr_xml($datas,$this->key);
+       	$xml = $this->arr_xml($data,$this->key);
         $ret=$this->post($api,$xml);
         return json_decode(json_encode(simplexml_load_string($ret, 'SimpleXMLElement', LIBXML_NOCDATA)), true);
 

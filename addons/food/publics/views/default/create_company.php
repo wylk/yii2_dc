@@ -332,7 +332,7 @@ $(document).ready(function(){
             if(tel == ''){
                 alert('请先输入有效的手机号码'); return false;
             }
-            $.get('?m=plugin&p=public&cn=index&id=food:sit:message',{tel:tel},function(re){
+            $.get('?r=plugin/publics/default/message',{tel:tel},function(re){
                 if(re.error == 0){
                     //调用接口已经成功
                     alert('短信验证码已经发送成功');
